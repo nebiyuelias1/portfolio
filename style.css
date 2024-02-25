@@ -1,0 +1,21 @@
+/* Include from local directory */ 
+@import url("colors.css");
+@import url("utilities.css");
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    height: 4rem;
+}
+
+#main {
+    height: calc(100vh - 4rem);
+}
+
+#hero {
+    content: "";
+    background-color: var(--primary-color-light);
+}

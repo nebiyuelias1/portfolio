@@ -1,0 +1,9 @@
+/* Define color variables for the site */
+
+/* Primary colors */
+:root {
+    --primary-color: rgba(243, 13, 13, 1);;
+    --primary-color-light: rgba(243, 13, 13, .2);
+    --secondary-color: #00ff00;
+    --tertiary-color: #0000ff;
+}

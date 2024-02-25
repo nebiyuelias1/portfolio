@@ -1,0 +1,81 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-grow-1 {
+    flex-grow: 1;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 90%;
+  height: 6px;
+  transform: skew(-12deg);
+  background: var(--primary-color);
+  z-index: -1;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+.a-none {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/* Horizontal padding only - level 1 */
+.p-h-1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Horizontal padding only - level 2 */
+.p-h-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Horizontal padding only - level 3 */
+.p-h-3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Horizontal padding only - level 4 */
+.p-h-4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.m-0 {
+    margin: 0;
+}
