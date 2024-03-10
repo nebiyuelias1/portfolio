@@ -7,3 +7,7 @@
     --secondary-color: #00ff00;
     --tertiary-color: #0000ff;
 }
+
+.color-primary {
+    color: var(--primary-color);
+}

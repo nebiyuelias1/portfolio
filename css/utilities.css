@@ -2,6 +2,7 @@
   max-width: 1200px;
   width: 100%;
   margin: auto;
+  padding: 1rem;
 }
 
 .flex {
@@ -32,7 +33,7 @@
   position: absolute;
   bottom: -2px;
   width: 90%;
-  height: 6px;
+  height: 4px;
   transform: skew(-12deg);
   background: var(--primary-color);
   z-index: -1;
@@ -78,4 +79,44 @@
 
 .m-0 {
     margin: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mt-6 {
+    margin-top: 4rem;
+}
+
+.mt-7 {
+    margin-top: 5rem;
+}
+
+.mt-8 {
+    margin-top: 6rem;
+}
+
+.mt-9 {
+    margin-top: 7rem;
 }

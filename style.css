@@ -1,21 +1,33 @@
-/* Include from local directory */ 
-@import url("colors.css");
-@import url("utilities.css");
+/* Include from local directory */
+@import url("css/colors.css");
+@import url("css/utilities.css");
+@import url("css/typography.css");
 
-body, html {
-    margin: 0;
-    padding: 0;
+/* Define variables for the site */
+:root {
+  --header-height: 4rem;
+}
+
+/* To include the padding, margin and border in an element's total width and height. */
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 #header {
-    height: 4rem;
+  height: var(--header-height);
 }
 
 #main {
-    height: calc(100vh - 4rem);
+  height: calc(100vh - var(--header-height));
 }
 
 #hero {
-    content: "";
-    background-color: var(--primary-color-light);
+  content: "";
+  background-color: var(--primary-color-light);
 }

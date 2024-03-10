@@ -1,0 +1,82 @@
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Extra Small */
+.xs-font {
+  font-size: 14px;
+}
+
+/* Small */
+.sm-font {
+  font-size: 16px;
+}
+
+/* Medium */
+.md-font {
+  font-size: 18px;
+}
+
+/* Large */
+.lg-font {
+  font-size: 20px;
+}
+
+/* Extra Large */
+.xl-font {
+  font-size: 2rem;
+}
+
+/* Double Extra Large */
+.xxl-font {
+  font-size: 3rem;
+}
+
+/* Text Align */
+.text-end {
+  text-align: end;
+}
