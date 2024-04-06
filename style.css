@@ -19,6 +19,11 @@ html {
   padding: 0;
 }
 
+/* Increase spacing between list items */
+ul li {
+  margin-bottom: 10px; /* Adjust the bottom margin to increase spacing */
+}
+
 #header {
   height: var(--header-height);
 }
