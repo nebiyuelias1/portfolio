@@ -24,6 +24,19 @@ ul li {
   margin-bottom: 10px; /* Adjust the bottom margin to increase spacing */
 }
 
+img {
+  max-width: 100%; /* Ensures images don't exceed their original size */
+  height: auto; /* Maintains aspect ratio */
+}
+
+a, a:active, a:visited {
+  text-decoration: none !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
 #header {
   height: var(--header-height);
 }
@@ -35,4 +48,86 @@ ul li {
 #hero {
   content: "";
   background-color: var(--primary-color-light);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.project-cards .card-title {
+  font-size:1.125rem
+}
+.project-cards .card-title a {
+  color:#434e5e;
+  text-decoration:none
+}
+.project-cards .card-img-container {
+  overflow:hidden
+}
+.project-cards .card-img-container:hover .overlay-logo {
+  -webkit-opacity:0;
+  -moz-opacity:0;
+  opacity:0
+}
+.project-cards .card-img-container:hover .overlay-content {
+  margin-top:0
+}
+.project-cards .card-img-overlay {
+  color:#fff;
+  transition:all .4s ease-in-out
+}
+.project-cards .card-img-overlay.overlay-logo {
+  margin-top:0;
+  background:rgba(67,78,94,.6)
+}
+.project-cards .card-img-overlay.overlay-logo .project-logo {
+  position:absolute;
+  width:100%;
+  left:0;
+  top:50%;
+  margin-top:-38px
+}
+.project-cards .card-img-overlay.overlay-content {
+  margin-top:600px;
+  background:var(--primary-color);
+  text-decoration:none
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.tag:not(body) {
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+}
+
+.social-link {
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
 }
