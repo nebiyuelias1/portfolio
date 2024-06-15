@@ -52,11 +52,11 @@ a, a:active, a:visited {
   z-index: 1000; /* Ensures the header stays on top of other content */
 }
 
-#main {
+#hero {
   height: calc(100vh - var(--header-height));
 }
 
-#hero {
+#bio {
   content: "";
   background-color: var(--primary-color-light);
 
