@@ -39,6 +39,16 @@ a, a:active, a:visited {
 
 #header {
   height: var(--header-height);
+  background: rgba(255, 255, 255, 0.5);
+  /* Glassmorphic effect */
+  backdrop-filter: blur(10px);
+  /* Optional: border and shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Other styling */
+  position: sticky; /* Makes the header stick to the top of the viewport */
+  top: 0; /* Distance from the top of the viewport */
+  z-index: 1000; /* Ensures the header stays on top of other content */
 }
 
 #main {

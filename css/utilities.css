@@ -114,6 +114,11 @@
   padding-right: 2rem;
 }
 
+.p-v-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .m-0 {
   margin: 0;
 }
