@@ -63,7 +63,6 @@ a, a:active, a:visited {
 
   .link::before {
     content: "";
-    z-index: -1;
     position: absolute;
     background-color: var(--primary-color-light);
     bottom: 0;
@@ -76,6 +75,62 @@ a, a:active, a:visited {
 
   .link:hover.link::before {
     max-width: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 25px;
+    background: black;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Transform the hamburger into an "X" */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-link {
+      display: none;
+      flex-direction: column;
+  }
+
+  .nav-link.active {
+      display: flex;
+      position: absolute;
+      padding: 1rem;
+      right: 0;
+      left: 0;
+      top: var(--header-height);
+      margin: auto;
+      width: 100%;
+      background: #fff;
+
+      
+  }
+  .nav-link.active li {
+    margin: 1rem 0;
   }
 }
 
