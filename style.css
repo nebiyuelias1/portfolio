@@ -38,6 +38,21 @@ a, a:active, a:visited {
   margin-top: 0;
 }
 
+input, textarea {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06) !important;
+  padding: 0.5rem 0.75rem;
+  border: 1px;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px var(--primary-color-light) !important;
+  outline: 2px solid transparent !important;
+  outline-offset: 2px !important;
+}
+
+
 #header {
   height: var(--header-height);
   background: rgba(255, 255, 255, 0.5);

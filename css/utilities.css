@@ -119,6 +119,10 @@
   padding-bottom: 0;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .m-0 {
   margin: 0;
 }
@@ -245,3 +249,13 @@
   border-radius: 0.25rem;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .w-mobile-full {
+    width: 100%;
+  }
+}
