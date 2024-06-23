@@ -59,8 +59,7 @@ input:focus, textarea:focus {
   /* Glassmorphic effect */
   backdrop-filter: blur(10px);
   /* Optional: border and shadow for depth */
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   /* Other styling */
   position: sticky; /* Makes the header stick to the top of the viewport */
   top: 0; /* Distance from the top of the viewport */
@@ -97,13 +96,13 @@ input:focus, textarea:focus {
   .link::before {
     content: "";
     position: absolute;
-    background-color: var(--primary-color-light);
+    background-color: rgba(131, 131, 131, 0.285);
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%;
+    height: 10%;
     max-width: 0;
-    transition: max-width 500ms;
+    transition: max-width 400ms;
   }
 
   .link:hover.link::before {
