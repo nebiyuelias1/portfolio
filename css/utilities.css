@@ -284,4 +284,8 @@
   .w-mobile-full {
     width: 100%;
   }
+
+  .h-mobile-auto {
+    height: auto;
+  }
 }
