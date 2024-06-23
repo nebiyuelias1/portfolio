@@ -67,6 +67,24 @@ input:focus, textarea:focus {
   z-index: 1000; /* Ensures the header stays on top of other content */
 }
 
+.header-brand {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.header-brand:hover {
+  color: var(--primary-color);
+}
+
+.header-avatar {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
 #hero {
   height: calc(100vh - var(--header-height));
 }
