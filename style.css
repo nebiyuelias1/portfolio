@@ -110,6 +110,10 @@ input:focus, textarea:focus {
   }
 }
 
+.active-link {
+  color: red;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
