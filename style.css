@@ -34,10 +34,6 @@ a, a:active, a:visited {
   text-decoration: none !important;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-}
-
 input, textarea {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06) !important;
   padding: 0.5rem 0.75rem;
@@ -209,29 +205,36 @@ input:focus, textarea:focus {
 .project-cards .card-title {
   font-size:1.125rem
 }
+
 .project-cards .card-title a {
   color:#434e5e;
   text-decoration:none
 }
+
 .project-cards .card-img-container {
   overflow:hidden
 }
+
 .project-cards .card-img-container:hover .overlay-logo {
   -webkit-opacity:0;
   -moz-opacity:0;
   opacity:0
 }
+
 .project-cards .card-img-container:hover .overlay-content {
   margin-top:0
 }
+
 .project-cards .card-img-overlay {
   color:#fff;
   transition:all .4s ease-in-out
 }
+
 .project-cards .card-img-overlay.overlay-logo {
   margin-top:0;
   background:rgba(67,78,94,.6)
 }
+
 .project-cards .card-img-overlay.overlay-logo .project-logo {
   position:absolute;
   width:100%;
@@ -239,11 +242,13 @@ input:focus, textarea:focus {
   top:50%;
   margin-top:-38px
 }
+
 .project-cards .card-img-overlay.overlay-content {
   margin-top:600px;
   background:var(--primary-color);
   text-decoration:none
 }
+
 .card-body {
   flex: 1 1 auto;
   padding: 1rem;

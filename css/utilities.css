@@ -67,6 +67,10 @@
   text-decoration: none;
 }
 
+.inline {
+  display: inline-block;
+}
+
 .a-none {
   text-decoration: none;
   color: inherit;
