@@ -7,6 +7,16 @@
 /* Define variables for the site */
 :root {
   --header-height: 4rem;
+
+  /* Default theme colors */
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
 }
 
 /* To include the padding, margin and border in an element's total width and height. */
@@ -18,6 +28,11 @@ body,
 html {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Increase spacing between list items */
