@@ -282,8 +282,9 @@ input:focus, textarea:focus {
   white-space: nowrap;
 }
 
-.social-link {
-  width: 32px;
-  height: 32px;
-  margin: 0 8px;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
 }
