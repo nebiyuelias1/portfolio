@@ -6,13 +6,23 @@ const navLinks = document.querySelectorAll(".nav-link a");
 const header = document.querySelector("#header");
 const hero = document.querySelector("#hero");
 const themeToggleBtn = document.querySelector("#themeToggleBtn");
-const lightThemeIcon = document.querySelector("#lightThemeIcon");
-const darkThemeIcon = document.querySelector("#darkThemeIcon");
+const lightThemeIcon = document.querySelector("#sunIcon");
+const darkThemeIcon = document.querySelector("#moonIcon");
 const currentTheme = localStorage.getItem("theme") || "light";
 
 document.addEventListener("DOMContentLoaded", () => {
   if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
+    darkThemeIcon.style.display = "block";
+    lightThemeIcon.style.display = "none";
+    sunIcon.style.display = "block";
+    moonIcon.style.display = "none";
+  } else{
+    document.documentElement.setAttribute("data-theme", "light");
+    darkThemeIcon.style.display = "none";
+    lightThemeIcon.style.display = "block";
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block"
   }
 });
 
@@ -80,16 +90,24 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-themeToggleBtn.addEventListener("click", () => {
-  lightThemeIcon.classList.toggle("d-none");
-  darkThemeIcon.classList.toggle("d-none");
-
-  const theme =
-    document.documentElement.getAttribute("data-theme") === "dark"
+themeToggleBtn.addEventListener("click", () => { 
+  const theme = document.documentElement.getAttribute("data-theme") === "dark"
       ? "light"
       : "dark";
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
+  if(theme === "dark"){
+    darkThemeIcon.style.display = "block";
+    lightThemeIcon.style.display = "none";
+    sunIcon.style.display = "block";
+    moonIcon.style.display = "none";
+  }
+  else{
+    darkThemeIcon.style.display = "none";
+    lightThemeIcon.style.display = "block";
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "block";
+  }
 });
 
 // Highlight the active section in the navbar

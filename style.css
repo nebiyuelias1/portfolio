@@ -288,3 +288,15 @@ input:focus, textarea:focus {
   gap: 2rem;
 
 }
+#sunIcon{
+  height: 25px;
+  width: 55px;
+  display: none;
+  border-radius: 30%;
+}
+#moonIcon{
+  height: 25px;
+  width: 55px;
+  display: none;
+  border-radius: 30%;
+}
