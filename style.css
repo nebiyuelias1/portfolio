@@ -291,3 +291,9 @@ input:focus, textarea:focus {
  background-color:transparent;
  border: 0px solid transparent;
 }
+#moonIcon{
+  display: none;
+}
+#sunIcon{
+  display: none;
+}
