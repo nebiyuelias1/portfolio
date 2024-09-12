@@ -290,6 +290,7 @@ input:focus, textarea:focus {
 #themeToggleBtn{
  background-color:transparent;
  border: 0px solid transparent;
+ cursor: pointer;
 }
 #moonIcon{
   display: none;
