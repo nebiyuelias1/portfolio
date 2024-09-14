@@ -281,10 +281,20 @@ input:focus, textarea:focus {
   padding-right: 0.75em;
   white-space: nowrap;
 }
-
 .social-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
 
+}
+#themeToggleBtn{
+ background-color:transparent;
+ border: 0px solid transparent;
+ cursor: pointer;
+}
+#moonIcon{
+  display: none;
+}
+#sunIcon{
+  display: none;
 }
