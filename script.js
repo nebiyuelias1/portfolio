@@ -10,20 +10,29 @@ const lightThemeIcon = document.querySelector("#sunIcon");
 const darkThemeIcon = document.querySelector("#moonIcon");
 const currentTheme = localStorage.getItem("theme") || "light";
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (currentTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
+function updateTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  if (theme === "dark") {
     darkThemeIcon.style.display = "block";
     lightThemeIcon.style.display = "none";
     sunIcon.style.display = "block";
     moonIcon.style.display = "none";
-  } else{
-    document.documentElement.setAttribute("data-theme", "light");
+  } else {
     darkThemeIcon.style.display = "none";
     lightThemeIcon.style.display = "block";
     sunIcon.style.display = "none";
-    moonIcon.style.display = "block"
+    moonIcon.style.display = "block";
   }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const currentTheme = localStorage.getItem("theme") || "light";
+  updateTheme(currentTheme);
+});
+themeToggleBtn.addEventListener("click", () => {
+  const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  updateTheme(theme);
 });
 
 scrollButton.addEventListener("click", () => {
@@ -88,26 +97,6 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       history.pushState(null, "", targetId);
     }
   });
-});
-
-themeToggleBtn.addEventListener("click", () => { 
-  const theme = document.documentElement.getAttribute("data-theme") === "dark"
-      ? "light"
-      : "dark";
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("theme", theme);
-  if(theme === "dark"){
-    darkThemeIcon.style.display = "block";
-    lightThemeIcon.style.display = "none";
-    sunIcon.style.display = "block";
-    moonIcon.style.display = "none";
-  }
-  else{
-    darkThemeIcon.style.display = "none";
-    lightThemeIcon.style.display = "block";
-    sunIcon.style.display = "none";
-    moonIcon.style.display = "block";
-  }
 });
 
 // Highlight the active section in the navbar
