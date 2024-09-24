@@ -287,7 +287,7 @@ input:focus, textarea:focus {
   gap: 2rem;
 
 }
-#themeToggleBtn{
+#themeToggleBtn, #soundButton{
  background-color:transparent;
  border: 0px solid transparent;
  cursor: pointer;
