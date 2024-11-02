@@ -298,9 +298,8 @@ input:focus, textarea:focus {
 #sunIcon{
   display: none;
 }
-
 #selam{
-  background-image: linear-gradient(8deg, #00ff51, #ffd500, #ca0000);
+  background-image: linear-gradient(8deg, #09d44d, #ffd500, #f70c0c);
   max-width: 11em;
   max-height: 3em;
 }
