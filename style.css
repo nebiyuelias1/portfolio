@@ -37,27 +37,34 @@ body {
 
 /* Increase spacing between list items */
 ul li {
-  margin-bottom: 10px; /* Adjust the bottom margin to increase spacing */
+  margin-bottom: 10px;
+  /* Adjust the bottom margin to increase spacing */
 }
 
 img {
-  max-width: 100%; /* Ensures images don't exceed their original size */
-  height: auto; /* Maintains aspect ratio */
+  max-width: 100%;
+  /* Ensures images don't exceed their original size */
+  height: auto;
+  /* Maintains aspect ratio */
 }
 
-a, a:active, a:visited {
+a,
+a:active,
+a:visited {
   text-decoration: none !important;
 }
 
-input, textarea {
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06) !important;
+input,
+textarea {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
   padding: 0.5rem 0.75rem;
   border: 1px;
   margin-bottom: 0.75rem;
   border-radius: 0.25rem;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   box-shadow: 0 0 0 3px var(--primary-color-light) !important;
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
@@ -72,9 +79,12 @@ input:focus, textarea:focus {
   /* Optional: border and shadow for depth */
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   /* Other styling */
-  position: sticky; /* Makes the header stick to the top of the viewport */
-  top: 0; /* Distance from the top of the viewport */
-  z-index: 1000; /* Ensures the header stays on top of other content */
+  position: sticky;
+  /* Makes the header stick to the top of the viewport */
+  top: 0;
+  /* Distance from the top of the viewport */
+  z-index: 1000;
+  /* Ensures the header stays on top of other content */
 }
 
 .header-brand {
@@ -133,7 +143,7 @@ input:focus, textarea:focus {
 /* Mobile styles */
 @media (max-width: 768px) {
   .hamburger {
-      display: block;
+    display: block;
   }
 
   .hamburger span {
@@ -144,38 +154,39 @@ input:focus, textarea:focus {
     margin: 5px auto;
     transition: all 0.3s ease;
   }
-  
+
   /* Transform the hamburger into an "X" */
   .hamburger.active span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
-  
+
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
   .nav-link {
-      display: none;
-      flex-direction: column;
+    display: none;
+    flex-direction: column;
   }
 
   .nav-link.active {
-      display: flex;
-      position: absolute;
-      padding: 1rem;
-      right: 0;
-      left: 0;
-      top: var(--header-height);
-      margin: auto;
-      width: 100%;
-      background: #fff;
+    display: flex;
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+    left: 0;
+    top: var(--header-height);
+    margin: auto;
+    width: 100%;
+    background: #fff;
 
-      
+
   }
+
   .nav-link.active li {
     margin: 1rem 0;
   }
@@ -194,7 +205,7 @@ input:focus, textarea:focus {
   }
 
   .scroll-button:hover .arrow {
-    animation: bounce-top 1.5s ease-in-out infinite both; 
+    animation: bounce-top 1.5s ease-in-out infinite both;
   }
 }
 
@@ -217,50 +228,50 @@ input:focus, textarea:focus {
 }
 
 .project-cards .card-title {
-  font-size:1.125rem
+  font-size: 1.125rem
 }
 
 .project-cards .card-title a {
-  color:#434e5e;
-  text-decoration:none
+  color: #434e5e;
+  text-decoration: none
 }
 
 .project-cards .card-img-container {
-  overflow:hidden
+  overflow: hidden
 }
 
 .project-cards .card-img-container:hover .overlay-logo {
-  -webkit-opacity:0;
-  -moz-opacity:0;
-  opacity:0
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0
 }
 
 .project-cards .card-img-container:hover .overlay-content {
-  margin-top:0
+  margin-top: 0
 }
 
 .project-cards .card-img-overlay {
-  color:#fff;
-  transition:all .4s ease-in-out
+  color: #fff;
+  transition: all .4s ease-in-out
 }
 
 .project-cards .card-img-overlay.overlay-logo {
-  margin-top:0;
-  background:rgba(67,78,94,.6)
+  margin-top: 0;
+  background: rgba(67, 78, 94, .6)
 }
 
 .project-cards .card-img-overlay.overlay-logo .project-logo {
-  position:absolute;
-  width:100%;
-  left:0;
-  top:50%;
-  margin-top:-38px
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  margin-top: -38px
 }
 
 .project-cards .card-img-overlay.overlay-content {
-  margin-top:600px;
-  background:var(--primary-color);
-  text-decoration:none
+  margin-top: 600px;
+  background: var(--primary-color);
+  text-decoration: none
 }
 
 .card-body {
@@ -281,25 +292,25 @@ input:focus, textarea:focus {
   padding-right: 0.75em;
   white-space: nowrap;
 }
+
 .social-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
 
 }
-#themeToggleBtn, #soundButton{
- background-color:transparent;
- border: 0px solid transparent;
- cursor: pointer;
+
+#themeToggleBtn,
+#soundButton {
+  background-color: transparent;
+  border: 0px solid transparent;
+  cursor: pointer;
 }
-#moonIcon{
+
+#moonIcon {
   display: none;
 }
-#sunIcon{
+
+#sunIcon {
   display: none;
-}
-#selam{
-  background-image: linear-gradient(8deg, #09d44d, #ffd500, #f70c0c);
-  max-width: 11em;
-  max-height: 3em;
 }
