@@ -9,6 +9,8 @@ const themeToggleBtn = document.querySelector("#themeToggleBtn");
 const lightThemeIcon = document.querySelector("#sunIcon");
 const darkThemeIcon = document.querySelector("#moonIcon");
 const currentTheme = localStorage.getItem("theme") || "light";
+const soundButton = document.querySelector("#soundButton");
+const soundEffect = document.querySelector("#soundEffect");
 
 function updateTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
@@ -106,3 +108,8 @@ function highlightActiveSection(activeSectionIndex) {
     navLinks[activeSectionIndex].classList.add("active-link");
   }
 }
+
+// Add sound to sound button
+soundButton.addEventListener("click", () =>{
+  soundEffect.play();
+});

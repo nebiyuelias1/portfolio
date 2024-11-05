@@ -226,7 +226,6 @@
                 </button>
             </div>
 
-
             <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -240,7 +239,11 @@
     <div id="hero" class="flex-col">
         <!-- About section -->
         <section class="container mt-6">
-            <p class="m-0 color-primary ubuntu-bold xl-font">Selam (/ˈsälam/ <span>🔊</span>) 👋,</p>
+            <p class="m-0 color-primary ubuntu-bold xl-font" id="selam">Selam (/ˈsälam/ <button id="soundButton">
+                <span class="xl-font">🔊</span>
+            </button>) 👋,
+            </p>
+            <audio id = "soundEffect" src = "assets/audio/selam.mp3"></audio>
             <br>
             <h1 class="m-0 ubuntu-bold xxl-font">I'm: <br> 
                 🇬🇧 Nebiyu <br> 
