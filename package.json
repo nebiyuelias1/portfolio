@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-blog.js",
+    "dev": "node scripts/build-blog.js && npx serve ."
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

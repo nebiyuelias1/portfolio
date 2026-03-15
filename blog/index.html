@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Blog | Nebiyu Elias</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-family-regular">
+    <!-- Header with navigation -->
+    <header id="header" class="flex">
+        <nav class="flex h-full container p-v-0">
+            <a href="../" class="header-brand">
+                <img alt="Header avatar" class="mr-2" height="16" width="16" src="../assets/img/logo.svg">
+                <h3 class="font-bold m-0">Nebiyu Elias</h3>
+            </a>
+
+            <div class="flex h-full h-mobile-auto">
+                <ul class="flex list-none m-0 nav-link h-full h-mobile-auto">
+                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex" href="../#about">About</a>
+                    </li>
+                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex"
+                            href="../#projects">Projects</a></li>
+                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex" href="./">Blog</a></li>
+                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex"
+                            href="../#contact">Contact</a></li>
+                </ul>
+
+                <!-- Theme switch button -->
+                <button id="themeToggleBtn">
+                    <!-- Light theme icon (same SVGs as index.html) -->
+                    <svg width="50" height="50" viewBox="0 0 178 78" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        id="sunIcon">
+                        <rect x="6.35" y="5.35" width="170.3" height="66.3" rx="33.15" fill="#A2D1FD"
+                            stroke="url(#paint0_linear_240_3)" stroke-width="1.3" />
+                        <mask id="mask0_240_3" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="6"
+                            width="169" height="65">
+                            <rect x="7" y="6" width="169" height="65" rx="32.5" fill="#E0FDFF" />
+                        </mask>
+                        <g mask="url(#mask0_240_3)">
+                            <g filter="url(#filter0_i_240_3)">
+                                <rect x="7" y="6" width="169" height="65" rx="32.5" fill="#A2D1FD" />
+                            </g>
+                            <g opacity="0.95">
+                                <circle cx="99.25" cy="64.84" r="13.65" fill="white" />
+                                <circle cx="118.18" cy="55.75" r="13.65" fill="white" />
+                                <circle cx="119.23" cy="71.32" r="13.65" fill="white" />
+                                <circle cx="135.31" cy="58.51" r="13.65" fill="white" />
+                                <circle cx="142.66" cy="71.05" r="13.65" fill="white" />
+                                <circle cx="156.32" cy="61.01" r="13.65" fill="white" />
+                            </g>
+                        </g>
+                        <g filter="url(#filter1_ddii_240_3)">
+                            <rect width="53.65" height="53.65" rx="26.83"
+                                transform="matrix(-1 0 0 1 65.88 11.75)" fill="#FFC187" fill-opacity="0.96" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_240_3" x="7" y="6" width="169" height="72.8"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="7.8" />
+                                <feGaussianBlur stdDeviation="5.85" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.446 0 0 0 0 0.734 0 0 0 0 1 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_240_3" />
+                            </filter>
+                            <filter id="filter1_ddii_240_3" x="0.53" y="0.05" width="77.05" height="77.05"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="5.85" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 1 0 0 0 0 0.757 0 0 0 0 0.529 0 0 0 0.6 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_240_3" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_240_3"
+                                    result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="2.6" />
+                                <feGaussianBlur stdDeviation="2.6" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 1 0 0 0 0 0.816 0 0 0 0 0.646 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect2" />
+                            </filter>
+                            <linearGradient id="paint0_linear_240_3" x1="93.45" y1="-9.6" x2="94.1" y2="91.15"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.125" stop-color="#6CB8FF" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <!-- Dark theme icon -->
+                    <svg width="50" height="50" viewBox="0 0 181 93" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        id="moonIcon">
+                        <rect x="1.35" y="13.35" width="170.3" height="66.3" rx="33.15" fill="#4F4F4F"
+                            stroke="url(#paint0_linear_240_2)" stroke-width="1.3" />
+                        <mask id="mask0_240_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="14"
+                            width="169" height="65">
+                            <rect x="2" y="14" width="169" height="65" rx="32.5" fill="black" />
+                        </mask>
+                        <g mask="url(#mask0_240_2)">
+                            <g filter="url(#filter0_i_240_2)">
+                                <rect x="2" y="14" width="169" height="65" rx="32.5" fill="#1F2533" />
+                            </g>
+                            <path
+                                d="M16.95 33.5L17.48 34.92L18.9 35.45L17.48 35.98L16.95 37.4L16.42 35.98L15 35.45L16.42 34.92L16.95 33.5Z"
+                                fill="#DEE5F3" />
+                            <path
+                                d="M50.75 20.5L51.28 21.92L52.7 22.45L51.28 22.98L50.75 24.4L50.22 22.98L48.8 22.45L50.22 21.92L50.75 20.5Z"
+                                fill="#DEE5F3" />
+                            <path
+                                d="M80.65 33.5L81.18 34.92L82.6 35.45L81.18 35.98L80.65 37.4L80.12 35.98L78.7 35.45L80.12 34.92L80.65 33.5Z"
+                                fill="#DEE5F3" />
+                        </g>
+                        <g filter="url(#filter4_dii_240_2)">
+                            <rect width="53.65" height="53.65" rx="26.82"
+                                transform="matrix(-1 0 0 1 165.1 19.7)" fill="#DEE5F3" />
+                        </g>
+                        <path opacity="0.9"
+                            d="M137.59 22.93C126.71 20.33 115.76 26.95 113.01 37.8L112.9 38.24C110.11 49.23 116.88 60.37 127.92 62.96C138.99 65.56 150.13 58.63 152.73 47.56C155.3 36.6 148.54 25.55 137.59 22.93Z"
+                            fill="#1F2533" fill-opacity="0.79" />
+                        <defs>
+                            <filter id="filter0_i_240_2" x="2" y="14" width="169" height="72.8"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="7.8" />
+                                <feGaussianBlur stdDeviation="5.85" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.09 0 0 0 0 0.106 0 0 0 0 0.142 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1" />
+                            </filter>
+                            <filter id="filter4_dii_240_2" x="88.05" y="0.2" width="92.65" height="92.65"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dx="-3.9" />
+                                <feGaussianBlur stdDeviation="9.75" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.717 0 0 0 0 0.717 0 0 0 0 0.717 0 0 0 0.31 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1" result="shape" />
+                            </filter>
+                            <linearGradient id="paint0_linear_240_2" x1="88.45" y1="-1.6" x2="89.1" y2="99.15"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.125" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container blog-container">
+        <h1><a href="./" class="anchor">#</a> Blog</h1>
+        <p class="md-font mb-4">Thoughts on software engineering, life in Taiwan, and everything in between.</p>
+
+        <div id="blog-posts" class="blog-posts">
+            <!-- Posts are loaded dynamically from posts.json -->
+            <p class="loading-text">Loading posts...</p>
+        </div>
+    </main>
+
+    <script>
+        // Theme management (same as main site)
+        const themeToggleBtn = document.querySelector("#themeToggleBtn");
+        const lightThemeIcon = document.querySelector("#sunIcon");
+        const darkThemeIcon = document.querySelector("#moonIcon");
+
+        function updateTheme(theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+            if (theme === "dark") {
+                darkThemeIcon.style.display = "block";
+                lightThemeIcon.style.display = "none";
+                sunIcon.style.display = "block";
+                moonIcon.style.display = "none";
+            } else {
+                darkThemeIcon.style.display = "none";
+                lightThemeIcon.style.display = "block";
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "block";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentTheme = localStorage.getItem("theme") || "light";
+            updateTheme(currentTheme);
+        });
+
+        themeToggleBtn.addEventListener("click", () => {
+            const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            updateTheme(theme);
+        });
+
+        function toggleMenu() {
+            const navLink = document.querySelector(".nav-link");
+            const menuIcon = document.querySelector("#menu-icon");
+            navLink.classList.toggle("active");
+            menuIcon.classList.toggle("active");
+        }
+
+        // Load and render blog posts
+        async function loadPosts() {
+            const container = document.getElementById("blog-posts");
+            try {
+                const response = await fetch("posts.json");
+                if (!response.ok) throw new Error("Failed to load posts");
+                const posts = await response.json();
+
+                if (posts.length === 0) {
+                    container.innerHTML = "<p>No posts yet. Check back soon!</p>";
+                    return;
+                }
+
+                container.innerHTML = posts
+                    .map(
+                        (post) => `
+                    <article class="blog-card">
+                        <a href="post.html#${post.slug}" class="blog-card-link">
+                            <div class="blog-card-content">
+                                <time class="blog-card-date" datetime="${post.date}">${formatDate(post.date)}</time>
+                                <h2 class="blog-card-title">${post.title}</h2>
+                                <p class="blog-card-description">${post.description}</p>
+                                <div class="blog-card-tags">
+                                    ${post.tags.map((tag) => `<span class="tag">${tag}</span>`).join(" ")}
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                `
+                    )
+                    .join("");
+            } catch (err) {
+                container.innerHTML =
+                    '<p>Could not load posts. Run <code>npm run build:blog</code> to generate the posts manifest.</p>';
+                console.error(err);
+            }
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return "";
+            const date = new Date(dateStr + "T00:00:00");
+            return date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            });
+        }
+
+        loadPosts();
+    </script>
+</body>
+
+</html>

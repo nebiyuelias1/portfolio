@@ -1,0 +1,245 @@
+/* Blog listing page styles */
+.blog-container {
+  max-width: 800px;
+  min-height: calc(100vh - var(--header-height));
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.blog-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+}
+
+.blog-card-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.35rem;
+  color: var(--text-color);
+}
+
+.blog-card-description {
+  margin: 0 0 0.75rem 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.blog-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Blog post page styles */
+.blog-back-link a {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.blog-back-link a:hover {
+  text-decoration: underline !important;
+}
+
+.blog-post-header {
+  margin-bottom: 1rem;
+}
+
+.blog-post-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.blog-post-description {
+  color: #666;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.blog-post-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* Markdown rendered content styles */
+.blog-post-body {
+  line-height: 1.8;
+}
+
+.blog-post-body h1,
+.blog-post-body h2,
+.blog-post-body h3,
+.blog-post-body h4,
+.blog-post-body h5,
+.blog-post-body h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-post-body h1 {
+  font-size: 1.75rem;
+}
+
+.blog-post-body h2 {
+  font-size: 1.5rem;
+}
+
+.blog-post-body h3 {
+  font-size: 1.25rem;
+}
+
+.blog-post-body p {
+  margin-bottom: 1rem;
+}
+
+.blog-post-body a {
+  color: var(--primary-color);
+}
+
+.blog-post-body a:hover {
+  text-decoration: underline !important;
+}
+
+.blog-post-body img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.blog-post-body blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.blog-post-body blockquote p {
+  margin: 0;
+}
+
+.blog-post-body code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.blog-post-body pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-post-body pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: 0.85rem;
+}
+
+.blog-post-body ul,
+.blog-post-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post-body li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-post-body hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.blog-post-body strong {
+  font-weight: 700;
+}
+
+.blog-post-body em {
+  font-style: italic;
+}
+
+/* Loading state */
+.loading-text {
+  color: #888;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] .blog-card {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .blog-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .blog-card-description,
+[data-theme="dark"] .blog-post-description {
+  color: #aaa;
+}
+
+[data-theme="dark"] .blog-card-date,
+[data-theme="dark"] .blog-post-date {
+  color: #999;
+}
+
+[data-theme="dark"] .blog-post-divider,
+[data-theme="dark"] .blog-post-body hr {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .blog-post-body blockquote {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .blog-post-body code {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .blog-post-body pre {
+  background: #0d1117;
+}

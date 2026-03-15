@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "my-journey-to-taiwan",
+    "title": "My Journey to Taiwan",
+    "date": "2025-01-15",
+    "description": "How I ended up living in Taiwan and what I've learned along the way.",
+    "tags": [
+      "life",
+      "taiwan",
+      "education"
+    ]
+  },
+  {
+    "slug": "setting-up-cicd-flutter",
+    "title": "Setting Up CI/CD for Flutter Projects",
+    "date": "2024-11-20",
+    "description": "A practical guide to automating your Flutter project's build and deployment pipeline using GitHub Actions.",
+    "tags": [
+      "flutter",
+      "ci-cd",
+      "devops"
+    ]
+  }
+]
