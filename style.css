@@ -1,316 +1,992 @@
-/* Include from local directory */
+/* ==========================================================
+   Main Stylesheet - Terminal/TUI Portfolio
+   Inspired by: Omarchy + Hyprland (Ethereal theme)
+   Cultural accent: Ethiopian heritage (tilet patterns)
+   ========================================================== */
+
 @import url("css/colors.css");
 @import url("css/utilities.css");
 @import url("css/typography.css");
 @import url("css/animations.css");
 
-/* Define variables for the site */
-:root {
-  --header-height: 4rem;
-
-  /* Default theme colors */
-  --background-color: #ffffff;
-  --text-color: #000000;
+/* ==========================================================
+   Base Reset
+   ========================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-/* Dark theme variables */
-[data-theme="dark"] {
-  --background-color: #121212;
-  --text-color: #ffffff;
-}
-
-/* To include the padding, margin and border in an element's total width and height. */
-* {
-  box-sizing: border-box;
-}
-
-body,
-html {
-  margin: 0;
-  padding: 0;
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+    background-color: #000;
+    color: var(--term-fg);
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* Increase spacing between list items */
+a, a:active, a:visited {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--ansi-yellow);
+}
+
 ul li {
-  margin-bottom: 10px;
-  /* Adjust the bottom margin to increase spacing */
+    margin-bottom: 0.5rem;
 }
 
 img {
-  max-width: 100%;
-  /* Ensures images don't exceed their original size */
-  height: auto;
-  /* Maintains aspect ratio */
-}
-
-a,
-a:active,
-a:visited {
-  text-decoration: none !important;
-}
-
-input,
-textarea {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
-  padding: 0.5rem 0.75rem;
-  border: 1px;
-  margin-bottom: 0.75rem;
-  border-radius: 0.25rem;
-}
-
-input:focus,
-textarea:focus {
-  box-shadow: 0 0 0 3px var(--primary-color-light) !important;
-  outline: 2px solid transparent !important;
-  outline-offset: 2px !important;
-}
-
-
-#header {
-  height: var(--header-height);
-  background: rgba(255, 255, 255, 0.5);
-  /* Glassmorphic effect */
-  backdrop-filter: blur(10px);
-  /* Optional: border and shadow for depth */
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  /* Other styling */
-  position: sticky;
-  /* Makes the header stick to the top of the viewport */
-  top: 0;
-  /* Distance from the top of the viewport */
-  z-index: 1000;
-  /* Ensures the header stays on top of other content */
-}
-
-.header-brand {
-  display: flex;
-  align-items: center;
-  color: black;
-}
-
-.header-brand:hover {
-  color: var(--primary-color);
-}
-
-.header-avatar {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  margin-right: .5rem;
-}
-
-#hero {
-  height: calc(100vh - var(--header-height));
-}
-
-.nav-link {
-  .link {
-    position: relative;
-  }
-
-  .link::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(131, 131, 131, 0.285);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    max-width: 0;
-    transition: max-width 400ms;
-  }
-
-  .link:hover.link::before {
     max-width: 100%;
-  }
+    height: auto;
 }
 
-.active-link {
-  color: red;
+/* ==========================================================
+   Waybar — persistent top bar (outside the terminal window)
+   Mimics Omarchy's Waybar: thin, flat, 26px, no pills,
+   monospace, Nerd Font icons, workspaces on left, clock center,
+   system tray right. Spans full viewport width.
+   ========================================================== */
+.waybar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 26px;
+    background: var(--term-bg-light);
+    color: var(--term-fg-dim);
+    font-size: 0.7rem;
+    padding: 0 0.75rem;
+    user-select: none;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: none;
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
+.waybar-left,
+.waybar-center,
+.waybar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Mobile styles */
+.waybar-left {
+    min-width: 120px;
+}
+
+.waybar-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.waybar-right {
+    min-width: 120px;
+    justify-content: flex-end;
+}
+
+.waybar-logo {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+.waybar-workspace {
+    font-size: 0.7rem;
+    color: var(--term-fg-dim);
+    opacity: 0.5;
+    padding: 0 0.15rem;
+}
+
+.waybar-workspace.active {
+    color: var(--term-fg-bright);
+    opacity: 1;
+    font-weight: 700;
+}
+
+.waybar-module {
+    font-size: 0.65rem;
+    color: var(--term-fg-dim);
+}
+
+.waybar-indicator {
+    color: var(--ansi-green);
+    font-size: 0.5rem;
+}
+
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+    .waybar-right .waybar-module:not(.waybar-indicator) {
+        display: none;
+    }
+}
 
-  .hamburger span {
+/* ==========================================================
+   Terminal Window Chrome — Hyprland/Omarchy style
+   No titlebar. 2px accent border. Rounded corners. Content rect.
+   Mimics a Hyprland window with active focus border.
+   ========================================================== */
+.terminal-window {
+    max-width: 1100px;
+    margin: 10px auto;
+    border: 2px solid var(--term-border-active);
+    border-radius: 10px;
+    height: calc(100vh - 46px);
+    display: flex;
+    flex-direction: column;
+    background: var(--term-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .terminal-window {
+        margin: 0;
+        height: calc(100vh - 26px);
+        border: none;
+        border-radius: 0;
+    }
+}
+
+/* ==========================================================
+   Tab Bar (Navigation) — Hyprland group tabs style
+   Thin flat bar, monospace, ultraheavy weight for active tab.
+   No icons, no decoration — just text in a thin strip.
+   ========================================================== */
+.tab-bar {
+    display: flex;
+    align-items: stretch;
+    background: var(--term-bg-light);
+    border-bottom: 1px solid var(--term-border);
+    font-size: 0.8rem;
+    overflow: visible;
+    flex-shrink: 0;
+    min-height: 28px;
+}
+
+.tab-bar a {
+    display: flex;
+    align-items: center;
+    padding: 0 0.85rem;
+    color: var(--term-fg-dim);
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.tab-bar a:hover {
+    color: var(--term-fg);
+    background: var(--term-bg-panel);
+}
+
+.tab-bar a.active-tab {
+    color: var(--term-fg-bright);
+    background: var(--term-bg);
+    font-weight: 800;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: -1px;
+}
+
+.tab-bar .tab-icon {
+    margin-right: 0.35rem;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.tab-bar a.active-tab .tab-icon {
+    opacity: 1;
+}
+
+/* Thin separator between tabs instead of full border */
+.tab-bar a + a {
+    border-left: 1px solid var(--term-border);
+}
+
+/* Mobile hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0.45rem 0.75rem;
+    margin-left: auto;
+}
+
+.hamburger span {
     display: block;
     height: 2px;
-    width: 25px;
-    background: black;
-    margin: 5px auto;
+    width: 18px;
+    background: var(--term-fg-dim);
+    margin: 3px auto;
     transition: all 0.3s ease;
-  }
+}
 
-  /* Transform the hamburger into an "X" */
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
+.hamburger.active span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    .tab-links { display: none; }
+    .tab-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 28px;
+        left: 0;
+        right: 0;
+        background: var(--term-bg-light);
+        border-bottom: 1px solid var(--term-border);
+        z-index: 100;
+    }
+    .tab-links.active a {
+        border-left: none;
+        border-bottom: 1px solid var(--term-border);
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+}
 
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+/* ==========================================================
+   Main Content Area
+   14px padding on all sides (matches Omarchy terminal padding)
+   ========================================================== */
+.terminal-body {
+    flex: 1 1 0;
+    overflow-y: auto;
+    padding: 0;
+    min-height: 0;
+}
 
-  .nav-link {
-    display: none;
-    flex-direction: column;
-  }
+.page-section {
+    padding: 2rem 1.5rem;
+}
 
-  .nav-link.active {
+@media (max-width: 768px) {
+    .page-section {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ==========================================================
+   Status Bar (Footer) — Waybar-inspired
+   Thin (26px), flat, no separators, compact monospace.
+   ========================================================== */
+.status-bar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    height: 26px;
+    background: var(--term-bg-light);
+    border-top: 1px solid var(--term-border);
+    font-size: 0.7rem;
+    color: var(--term-fg-dim);
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    position: relative;
+}
+
+/* Subtle tilet zigzag accent above the status bar */
+.status-bar::before {
+    content: "";
     position: absolute;
-    padding: 1rem;
-    right: 0;
+    top: -3px;
     left: 0;
-    top: var(--header-height);
-    margin: auto;
-    width: 100%;
-    background: #fff;
-
-
-  }
-
-  .nav-link.active li {
-    margin: 1rem 0;
-  }
+    right: 0;
+    height: 4px;
+    background-image: var(--tilet-zigzag);
+    background-repeat: repeat-x;
+    background-size: 12px 6px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 2;
 }
 
-#bio {
-  content: "";
-  background-color: var(--primary-color-light);
+.status-bar-mode {
+    background: var(--statusbar-bg);
+    color: var(--statusbar-fg);
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.65rem;
+}
 
-  .scroll-button {
+.status-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-bar a {
+    color: var(--term-fg-dim);
+    transition: color 0.15s;
+}
+
+.status-bar a:hover {
+    color: var(--ansi-yellow);
+}
+
+.status-bar-file {
+    color: var(--term-fg-dim);
+}
+
+.status-bar-dot {
+    color: var(--ansi-green);
+}
+
+/* ==========================================================
+   Hero / Landing Section
+   ========================================================== */
+.hero-section {
+    padding: 3rem 1.5rem 2rem;
+    border-bottom: 1px solid var(--term-border);
+    position: relative;
+}
+
+/* Subtle tilet diamond lattice texture on the hero background */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--tilet-diamond);
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 1rem 1.5rem;
+    }
+}
+
+.hero-prompt {
+    margin-bottom: 1.5rem;
+}
+
+.prompt-line {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+    line-height: 1.8;
+}
+
+.prompt-user { color: var(--prompt-user); font-weight: 700; }
+.prompt-at { color: var(--term-fg-dim); }
+.prompt-host { color: var(--prompt-path); }
+.prompt-colon { color: var(--term-fg-dim); }
+.prompt-path { color: var(--prompt-path); }
+.prompt-symbol { color: var(--prompt-symbol); margin-right: 0.5rem; }
+
+.hero-output {
+    padding-left: 0;
+}
+
+.hero-ascii {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--term-fg-bright);
+    margin: 0;
+    line-height: 1.15;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+@media (max-width: 768px) {
+    .hero-ascii {
+        font-size: 0.4rem;
+    }
+}
+
+.hero-name-amharic {
+    font-size: 1.5rem;
+    color: var(--ansi-yellow);
+    margin: 0.25rem 0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .hero-name-amharic {
+        font-size: 1.15rem;
+    }
+}
+
+.hero-tagline {
+    color: var(--term-fg-dim);
+    font-size: 1rem;
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+.hero-tagline .hl-green { color: var(--ansi-green); }
+.hero-tagline .hl-yellow { color: var(--ansi-yellow); }
+.hero-tagline .hl-string { color: var(--ansi-green); }
+.hero-tagline .hl-keyword { color: var(--ansi-orange); }
+.hero-tagline .hl-var { color: var(--term-fg-bright); }
+.hero-tagline .hl-comment { color: var(--term-fg-dim); }
+
+.hero-greeting {
+    color: var(--term-fg-dim);
+    font-size: 0.85rem;
+    margin: 1rem 0 0;
+}
+
+.hero-greeting .hl-comment {
+    color: var(--term-fg-dim);
+}
+
+.hero-selam {
+    color: var(--eth-green);
+    font-weight: 700;
+}
+
+/* ==========================================================
+   Section Headers (TUI-style)
+   ========================================================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--term-border);
+    position: relative;
+}
+
+/* Tilet zigzag accent on the section header underline */
+.section-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 4rem;
+    height: 3px;
+    background-image: var(--tilet-zigzag);
+    background-repeat: repeat-x;
+    background-size: 12px 6px;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-header .section-icon {
+    color: var(--ansi-yellow);
+    font-size: 0.85rem;
+}
+
+.section-header .section-hint {
+    margin-left: auto;
+    color: var(--term-fg-dim);
+    font-size: 0.7rem;
+}
+
+/* ==========================================================
+   About Section - Details/Summary TUI panels
+   ========================================================== */
+.about-section {
+    border-bottom: 1px solid var(--term-border);
+}
+
+.tui-details {
+    border: 1px solid var(--term-border);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    background: var(--term-bg-panel);
+    overflow: hidden;
+}
+
+.tui-details[open] {
+    border-color: var(--term-border-active);
+}
+
+.tui-details summary {
+    padding: 0.6rem 1rem;
     cursor: pointer;
-  }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--term-fg);
+    font-weight: 500;
+    font-size: 0.9rem;
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+}
 
-  .arrow {
+.tui-details summary::-webkit-details-marker { display: none; }
+.tui-details summary::marker { display: none; content: ""; }
+
+.tui-details summary:hover {
+    background: var(--term-highlight);
+}
+
+.tui-details summary .toggle-icon {
+    color: var(--ansi-yellow);
+    font-size: 0.75rem;
+    width: 1em;
     display: inline-block;
-  }
-
-  .scroll-button:hover .arrow {
-    animation: bounce-top 1.5s ease-in-out infinite both;
-  }
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
+.tui-details[open] summary .toggle-icon {
+    color: var(--ansi-green);
 }
 
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.tui-details summary .detail-label {
+    color: var(--term-fg-bright);
 }
 
-.project-cards .card-title {
-  font-size: 1.125rem
+.tui-details summary .detail-hint {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--term-fg-dim);
 }
 
-.project-cards .card-title a {
-  color: #434e5e;
-  text-decoration: none
+.tui-details-content {
+    padding: 0.75rem 1rem 1rem;
+    border-top: 1px solid var(--term-border);
+    font-size: 0.875rem;
+    color: var(--term-fg);
+    line-height: 1.7;
 }
 
-.project-cards .card-img-container {
-  overflow: hidden
+.tui-details-content ul {
+    padding-left: 1.25rem;
+    margin: 0;
 }
 
-.project-cards .card-img-container:hover .overlay-logo {
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0
+.tui-details-content li {
+    margin-bottom: 0.6rem;
 }
 
-.project-cards .card-img-container:hover .overlay-content {
-  margin-top: 0
+.tui-details-content a {
+    color: var(--prompt-path);
+    border-bottom: 1px dashed var(--term-border);
+    transition: color 0.15s, border-color 0.15s;
 }
 
-.project-cards .card-img-overlay {
-  color: #fff;
-  transition: all .4s ease-in-out
+.tui-details-content a:hover {
+    color: var(--ansi-yellow);
+    border-color: var(--ansi-yellow);
 }
 
-.project-cards .card-img-overlay.overlay-logo {
-  margin-top: 0;
-  background: rgba(67, 78, 94, .6)
+/* Experience items */
+.exp-item {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed var(--term-border);
 }
 
-.project-cards .card-img-overlay.overlay-logo .project-logo {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 50%;
-  margin-top: -38px
+.exp-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.project-cards .card-img-overlay.overlay-content {
-  margin-top: 600px;
-  background: var(--primary-color);
-  text-decoration: none
+.exp-title {
+    color: var(--term-fg-bright);
+    font-weight: 700;
+    margin: 0 0 0.15rem;
+    font-size: 0.9rem;
 }
 
-.card-body {
-  flex: 1 1 auto;
-  padding: 1rem;
+.exp-company a {
+    color: var(--ansi-green);
 }
 
-.tag:not(body) {
-  align-items: center;
-  background-color: #f5f5f5;
-  color: #4a4a4a;
-  display: inline-flex;
-  font-size: 0.75rem;
-  height: 2em;
-  justify-content: center;
-  line-height: 1.5;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-  white-space: nowrap;
+.exp-meta {
+    color: var(--term-fg-dim);
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
+.exp-desc {
+    padding-left: 1rem;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+}
+
+.exp-desc li {
+    margin-bottom: 0.35rem;
+}
+
+/* ==========================================================
+   Projects Section - Card grid as TUI panels
+   ========================================================== */
+.projects-section {
+    border-bottom: 1px solid var(--term-border);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.project-card {
+    border: 1px solid var(--term-border);
+    border-radius: 8px;
+    background: var(--term-bg-panel);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tilet cross pattern overlay on card hover */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--tilet-cross);
+    background-repeat: repeat;
+    background-size: 24px 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.project-card:hover::before {
+    opacity: 0.12;
+}
+
+.project-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(125, 130, 217, 0.1);
+}
+
+.project-card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--term-border);
+    display: block;
+}
+
+.project-card-body {
+    padding: 0.75rem 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--term-fg-bright);
+    margin: 0 0 0.35rem;
+}
+
+.project-card-title a {
+    color: var(--term-fg-bright);
+    transition: color 0.15s;
+}
+
+.project-card-title a:hover {
+    color: var(--ansi-yellow);
+}
+
+.project-card-desc {
+    font-size: 0.8rem;
+    color: var(--term-fg-dim);
+    margin: 0 0 0.75rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    background: var(--term-bg-light);
+    color: var(--term-fg-dim);
+    border: 1px solid var(--term-border);
+    font-family: inherit;
+}
+
+.tag-green { color: var(--ansi-green); border-color: rgba(146, 165, 147, 0.3); }
+.tag-yellow { color: var(--ansi-yellow); border-color: rgba(233, 187, 79, 0.3); }
+.tag-red { color: var(--ansi-red); border-color: rgba(237, 91, 90, 0.3); }
+
+/* ==========================================================
+   Contact Section
+   ========================================================== */
+.contact-section {
+    padding-bottom: 3rem;
+}
+
+.contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+}
+
+.contact-sidebar {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.contact-sidebar-label {
+    color: var(--term-fg-dim);
+    font-size: 0.8rem;
+    margin: 0 0 0.75rem;
+}
+
+.contact-sidebar .social-links {
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--term-fg-dim);
+    margin-bottom: 0.25rem;
+}
+
+.form-group label .label-colon {
+    color: var(--ansi-yellow);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    background: var(--term-bg-panel);
+    border: 1px solid var(--term-border);
+    border-radius: 6px;
+    color: var(--term-fg);
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(125, 130, 217, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--term-bg);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.45rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.15s, box-shadow 0.15s;
+}
+
+.btn-submit:hover {
+    background: #9194e0;
+    box-shadow: 0 0 10px rgba(125, 130, 217, 0.3);
+}
+
+/* Social links in contact */
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-#themeToggleBtn,
-#soundButton {
-  background-color: transparent;
-  border: 0px solid transparent;
-  cursor: pointer;
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--term-fg-dim);
+    font-size: 0.8rem;
+    transition: color 0.15s;
+    border-bottom: 1px dashed transparent;
 }
 
-#moonIcon {
-  display: none;
+.social-link:hover {
+    color: var(--ansi-yellow);
+    border-bottom-color: var(--ansi-yellow);
 }
 
-#sunIcon {
-  display: none;
+.social-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ==========================================================
+   Command Palette hint
+   ========================================================== */
+.cmd-hint {
+    color: var(--term-fg-dim);
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.cmd-hint kbd {
+    background: var(--term-bg-light);
+    border: 1px solid var(--term-border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.7rem;
+    font-family: inherit;
+    color: var(--term-fg);
+}
+
+/* ==========================================================
+   Shared syntax-highlight classes
+   ========================================================== */
+.hl-comment {
+    color: var(--term-fg-dim);
+}
+
+/* ==========================================================
+   Habeshan Tilet (ጥለት) Pattern Dividers
+   Woven geometric patterns inspired by Ethiopian textiles
+   ========================================================== */
+.eth-pattern {
+    height: 16px;
+    background-image: var(--tilet-netela);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 32px 16px;
+    opacity: 0.6;
+    user-select: none;
+    position: relative;
+}
+
+/* Fade the edges of the pattern strip into the background */
+.eth-pattern::before,
+.eth-pattern::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    z-index: 1;
+}
+
+.eth-pattern::before {
+    left: 0;
+    background: linear-gradient(to right, var(--term-bg), transparent);
+}
+
+.eth-pattern::after {
+    right: 0;
+    background: linear-gradient(to left, var(--term-bg), transparent);
+}
+
+/* ==========================================================
+   Scrollbar
+   ========================================================== */
+.terminal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: var(--term-bg);
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: var(--term-border);
+    border-radius: 3px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--term-fg-dim);
+}
+
+/* ==========================================================
+   Print styles
+   ========================================================== */
+@media print {
+    .waybar,
+    .tab-bar,
+    .status-bar,
+    .hamburger {
+        display: none;
+    }
+
+    .terminal-window {
+        border: none;
+        margin: 0;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
 }

@@ -7,272 +7,147 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#060B1E">
+    <meta name="theme-color" content="#060B1E">
     <title>Blog | Nebiyu Elias</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
-    <!-- Marked.js for client-side markdown rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
-<body class="font-family-regular">
-    <!-- Header with navigation -->
-    <header id="header" class="flex">
-        <nav class="flex h-full container p-v-0">
-            <a href="../" class="header-brand">
-                <img alt="Header avatar" class="mr-2" height="16" width="16" src="../assets/img/logo.svg">
-                <h3 class="font-bold m-0">Nebiyu Elias</h3>
-            </a>
+<body>
+    <!-- Waybar -->
+    <div class="waybar">
+        <div class="waybar-left">
+            <span class="waybar-logo">&#9670;</span>
+            <span class="waybar-workspace active">1</span>
+            <span class="waybar-workspace">2</span>
+            <span class="waybar-workspace">3</span>
+            <span class="waybar-workspace">4</span>
+            <span class="waybar-workspace">5</span>
+        </div>
+        <div class="waybar-center">
+            <span id="waybarClock"></span>
+        </div>
+        <div class="waybar-right">
+            <span class="waybar-module">&#9729; Taipei</span>
+            <span class="waybar-module">&#9889; utf-8</span>
+            <span class="waybar-module waybar-indicator">&#9679;</span>
+        </div>
+    </div>
 
-            <div class="flex h-full h-mobile-auto">
-                <ul class="flex list-none m-0 nav-link h-full h-mobile-auto">
-                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex" href="../#about">About</a>
-                    </li>
-                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex"
-                            href="../#projects">Projects</a></li>
-                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex" href="./">Blog</a></li>
-                    <li class="p-h-4 m-0 h-full flex"><a class="a-none link h-full flex"
-                            href="../#contact">Contact</a></li>
-                </ul>
+    <div class="terminal-window">
 
-                <!-- Theme switch button -->
-                <button id="themeToggleBtn">
-                    <svg width="50" height="50" viewBox="0 0 178 78" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        id="sunIcon">
-                        <rect x="6.35" y="5.35" width="170.3" height="66.3" rx="33.15" fill="#A2D1FD"
-                            stroke="url(#paint0_linear_240_3)" stroke-width="1.3" />
-                        <mask id="mask0_240_3" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="6"
-                            width="169" height="65">
-                            <rect x="7" y="6" width="169" height="65" rx="32.5" fill="#E0FDFF" />
-                        </mask>
-                        <g mask="url(#mask0_240_3)">
-                            <g filter="url(#filter0_i_240_3)">
-                                <rect x="7" y="6" width="169" height="65" rx="32.5" fill="#A2D1FD" />
-                            </g>
-                            <g opacity="0.95">
-                                <circle cx="99.25" cy="64.84" r="13.65" fill="white" />
-                                <circle cx="118.18" cy="55.75" r="13.65" fill="white" />
-                                <circle cx="119.23" cy="71.32" r="13.65" fill="white" />
-                                <circle cx="135.31" cy="58.51" r="13.65" fill="white" />
-                                <circle cx="142.66" cy="71.05" r="13.65" fill="white" />
-                                <circle cx="156.32" cy="61.01" r="13.65" fill="white" />
-                            </g>
-                        </g>
-                        <g filter="url(#filter1_ddii_240_3)">
-                            <rect width="53.65" height="53.65" rx="26.83"
-                                transform="matrix(-1 0 0 1 65.88 11.75)" fill="#FFC187" fill-opacity="0.96" />
-                        </g>
-                        <defs>
-                            <filter id="filter0_i_240_3" x="7" y="6" width="169" height="72.8"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset dy="7.8" />
-                                <feGaussianBlur stdDeviation="5.85" />
-                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                <feColorMatrix type="matrix"
-                                    values="0 0 0 0 0.446 0 0 0 0 0.734 0 0 0 0 1 0 0 0 1 0" />
-                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_240_3" />
-                            </filter>
-                            <filter id="filter1_ddii_240_3" x="0.53" y="0.05" width="77.05" height="77.05"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset />
-                                <feGaussianBlur stdDeviation="5.85" />
-                                <feColorMatrix type="matrix"
-                                    values="0 0 0 0 1 0 0 0 0 0.757 0 0 0 0 0.529 0 0 0 0.6 0" />
-                                <feBlend mode="normal" in2="BackgroundImageFix"
-                                    result="effect1_dropShadow_240_3" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_240_3"
-                                    result="shape" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset dy="2.6" />
-                                <feGaussianBlur stdDeviation="2.6" />
-                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                <feColorMatrix type="matrix"
-                                    values="0 0 0 0 1 0 0 0 0 0.816 0 0 0 0 0.646 0 0 0 1 0" />
-                                <feBlend mode="normal" in2="shape" result="effect2" />
-                            </filter>
-                            <linearGradient id="paint0_linear_240_3" x1="93.45" y1="-9.6" x2="94.1" y2="91.15"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0.125" stop-color="#6CB8FF" />
-                                <stop offset="1" stop-color="white" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <svg width="50" height="50" viewBox="0 0 181 93" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        id="moonIcon">
-                        <rect x="1.35" y="13.35" width="170.3" height="66.3" rx="33.15" fill="#4F4F4F"
-                            stroke="url(#paint0_linear_240_2)" stroke-width="1.3" />
-                        <mask id="mask0_240_2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="14"
-                            width="169" height="65">
-                            <rect x="2" y="14" width="169" height="65" rx="32.5" fill="black" />
-                        </mask>
-                        <g mask="url(#mask0_240_2)">
-                            <g filter="url(#filter0_i_240_2)">
-                                <rect x="2" y="14" width="169" height="65" rx="32.5" fill="#1F2533" />
-                            </g>
-                            <path
-                                d="M16.95 33.5L17.48 34.92L18.9 35.45L17.48 35.98L16.95 37.4L16.42 35.98L15 35.45L16.42 34.92L16.95 33.5Z"
-                                fill="#DEE5F3" />
-                            <path
-                                d="M50.75 20.5L51.28 21.92L52.7 22.45L51.28 22.98L50.75 24.4L50.22 22.98L48.8 22.45L50.22 21.92L50.75 20.5Z"
-                                fill="#DEE5F3" />
-                            <path
-                                d="M80.65 33.5L81.18 34.92L82.6 35.45L81.18 35.98L80.65 37.4L80.12 35.98L78.7 35.45L80.12 34.92L80.65 33.5Z"
-                                fill="#DEE5F3" />
-                        </g>
-                        <g filter="url(#filter4_dii_240_2)">
-                            <rect width="53.65" height="53.65" rx="26.82"
-                                transform="matrix(-1 0 0 1 165.1 19.7)" fill="#DEE5F3" />
-                        </g>
-                        <path opacity="0.9"
-                            d="M137.59 22.93C126.71 20.33 115.76 26.95 113.01 37.8L112.9 38.24C110.11 49.23 116.88 60.37 127.92 62.96C138.99 65.56 150.13 58.63 152.73 47.56C155.3 36.6 148.54 25.55 137.59 22.93Z"
-                            fill="#1F2533" fill-opacity="0.79" />
-                        <defs>
-                            <filter id="filter0_i_240_2" x="2" y="14" width="169" height="72.8"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset dy="7.8" />
-                                <feGaussianBlur stdDeviation="5.85" />
-                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                <feColorMatrix type="matrix"
-                                    values="0 0 0 0 0.09 0 0 0 0 0.106 0 0 0 0 0.142 0 0 0 1 0" />
-                                <feBlend mode="normal" in2="shape" result="effect1" />
-                            </filter>
-                            <filter id="filter4_dii_240_2" x="88.05" y="0.2" width="92.65" height="92.65"
-                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feColorMatrix in="SourceAlpha" type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset dx="-3.9" />
-                                <feGaussianBlur stdDeviation="9.75" />
-                                <feColorMatrix type="matrix"
-                                    values="0 0 0 0 0.717 0 0 0 0 0.717 0 0 0 0 0.717 0 0 0 0.31 0" />
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1" result="shape" />
-                            </filter>
-                            <linearGradient id="paint0_linear_240_2" x1="88.45" y1="-1.6" x2="89.1" y2="99.15"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0.125" />
-                                <stop offset="1" stop-color="white" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </button>
+        <!-- Tab Bar -->
+        <nav class="tab-bar" id="tabBar">
+            <div class="tab-links" id="tabLinks">
+                <a href="../#home" data-section="home">
+                    <span class="tab-icon">~</span> home
+                </a>
+                <a href="../#about" data-section="about">
+                    <span class="tab-icon">i</span> about
+                </a>
+                <a href="../#projects" data-section="projects">
+                    <span class="tab-icon">&gt;</span> projects
+                </a>
+                <a href="./" class="active-tab" data-section="blog">
+                    <span class="tab-icon">#</span> blog
+                </a>
+                <a href="../#contact" data-section="contact">
+                    <span class="tab-icon">@</span> contact
+                </a>
             </div>
-
             <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
-    </header>
 
-    <main class="container blog-container">
-        <nav class="blog-back-link mb-2">
-            <a href="./">&larr; Back to all posts</a>
-        </nav>
+        <!-- Content -->
+        <div class="terminal-body">
+            <main class="container blog-container">
+                <nav class="blog-back-link mb-2">
+                    <a href="./">&larr; back to all posts</a>
+                </nav>
 
-        <article id="blog-post" class="blog-post">
-            <p class="loading-text">Loading post...</p>
-        </article>
-    </main>
+                <article id="blog-post" class="blog-post">
+                    <p class="loading-text">Loading post...</p>
+                </article>
+            </main>
+        </div>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <span class="status-bar-mode">NORMAL</span>
+            <span id="postSlug" class="status-bar-file">blog/post</span>
+            <div class="status-bar-right">
+                <a href="./">&larr; all posts</a>
+            </div>
+        </footer>
+    </div>
 
     <script>
-        // Theme management
-        const themeToggleBtn = document.querySelector("#themeToggleBtn");
-        const lightThemeIcon = document.querySelector("#sunIcon");
-        const darkThemeIcon = document.querySelector("#moonIcon");
-
-        function updateTheme(theme) {
-            document.documentElement.setAttribute("data-theme", theme);
-            localStorage.setItem("theme", theme);
-            if (theme === "dark") {
-                darkThemeIcon.style.display = "block";
-                lightThemeIcon.style.display = "none";
-                sunIcon.style.display = "block";
-                moonIcon.style.display = "none";
-            } else {
-                darkThemeIcon.style.display = "none";
-                lightThemeIcon.style.display = "block";
-                sunIcon.style.display = "none";
-                moonIcon.style.display = "block";
+        // Waybar clock
+        (function () {
+            var el = document.getElementById("waybarClock");
+            function tick() {
+                if (!el) return;
+                var now = new Date();
+                var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+                var h = now.getHours().toString().padStart(2, "0");
+                var m = now.getMinutes().toString().padStart(2, "0");
+                el.textContent = days[now.getDay()] + " " + h + ":" + m;
             }
-        }
+            tick(); setInterval(tick, 15000);
+        })();
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const currentTheme = localStorage.getItem("theme") || "light";
-            updateTheme(currentTheme);
-        });
-
-        themeToggleBtn.addEventListener("click", () => {
-            const theme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-            updateTheme(theme);
-        });
-
+        // Mobile menu toggle
         function toggleMenu() {
-            const navLink = document.querySelector(".nav-link");
-            const menuIcon = document.querySelector("#menu-icon");
-            navLink.classList.toggle("active");
-            menuIcon.classList.toggle("active");
+            var tabLinks = document.querySelector("#tabLinks");
+            var menuIcon = document.querySelector("#menu-icon");
+            if (tabLinks) tabLinks.classList.toggle("active");
+            if (menuIcon) menuIcon.classList.toggle("active");
         }
 
-        // Parse frontmatter from raw markdown
+        // Parse frontmatter
         function parseFrontmatter(raw) {
-            const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+            var match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
             if (!match) return { meta: {}, content: raw };
 
-            const frontmatter = match[1];
-            const content = match[2];
-            const meta = {};
+            var frontmatter = match[1];
+            var content = match[2];
+            var meta = {};
 
-            frontmatter.split("\n").forEach((line) => {
-                const colonIdx = line.indexOf(":");
+            frontmatter.split("\n").forEach(function (line) {
+                var colonIdx = line.indexOf(":");
                 if (colonIdx === -1) return;
-                const key = line.slice(0, colonIdx).trim();
-                let value = line.slice(colonIdx + 1).trim();
-                // Handle simple arrays (tags)
+                var key = line.slice(0, colonIdx).trim();
+                var value = line.slice(colonIdx + 1).trim();
                 if (key === "tags") {
                     meta[key] = [];
-                    return;
-                }
-                if (line.trim().startsWith("- ") && meta.tags) {
-                    // This is handled below
                     return;
                 }
                 meta[key] = value;
             });
 
-            // Parse tags array
-            const tagMatches = frontmatter.match(/tags:\n((?:\s+-\s+.+\n?)*)/);
+            var tagMatches = frontmatter.match(/tags:\n((?:\s+-\s+.+\n?)*)/);
             if (tagMatches) {
                 meta.tags = tagMatches[1]
                     .split("\n")
-                    .map((l) => l.replace(/^\s+-\s+/, "").trim())
+                    .map(function (l) { return l.replace(/^\s+-\s+/, "").trim(); })
                     .filter(Boolean);
             }
 
-            return { meta, content };
+            return { meta: meta, content: content };
         }
 
         function formatDate(dateStr) {
             if (!dateStr) return "";
-            const date = new Date(dateStr + "T00:00:00");
+            var date = new Date(dateStr + "T00:00:00");
             return date.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -280,43 +155,44 @@
             });
         }
 
-        // Load and render the blog post
+        // Load and render post
         async function loadPost() {
-            const container = document.getElementById("blog-post");
-            const slug = window.location.hash.slice(1);
+            var container = document.getElementById("blog-post");
+            var slug = window.location.hash.slice(1);
+            var postSlugEl = document.getElementById("postSlug");
 
             if (!slug) {
-                container.innerHTML = '<p>Post not found. <a href="./">Go back to all posts.</a></p>';
+                container.innerHTML = '<p style="color: var(--term-fg-dim);">Post not found. <a href="./">Go back to all posts.</a></p>';
                 return;
             }
 
-            try {
-                const response = await fetch(`posts/${slug}.md`);
-                if (!response.ok) throw new Error("Post not found");
-                const raw = await response.text();
-                const { meta, content } = parseFrontmatter(raw);
+            if (postSlugEl) postSlugEl.textContent = "blog/" + slug;
 
-                // Update page title
+            try {
+                var response = await fetch("posts/" + slug + ".md");
+                if (!response.ok) throw new Error("Post not found");
+                var raw = await response.text();
+                var parsed = parseFrontmatter(raw);
+                var meta = parsed.meta;
+                var content = parsed.content;
+
                 if (meta.title) {
-                    document.title = `${meta.title} | Nebiyu Elias`;
+                    document.title = meta.title + " | Nebiyu Elias";
                 }
 
-                // Render the post
-                const headerHtml = `
-                    <header class="blog-post-header">
-                        ${meta.date ? `<time class="blog-post-date" datetime="${meta.date}">${formatDate(meta.date)}</time>` : ""}
-                        ${meta.title ? `<h1 class="blog-post-title">${meta.title}</h1>` : ""}
-                        ${meta.description ? `<p class="blog-post-description md-font">${meta.description}</p>` : ""}
-                        ${meta.tags && meta.tags.length ? `<div class="blog-card-tags">${meta.tags.map((t) => `<span class="tag">${t}</span>`).join(" ")}</div>` : ""}
-                    </header>
-                    <hr class="blog-post-divider">
-                `;
+                var headerHtml = '<header class="blog-post-header">';
+                if (meta.date) headerHtml += '<time class="blog-post-date" datetime="' + meta.date + '">' + formatDate(meta.date) + '</time>';
+                if (meta.title) headerHtml += '<h1 class="blog-post-title">' + meta.title + '</h1>';
+                if (meta.description) headerHtml += '<p class="blog-post-description">' + meta.description + '</p>';
+                if (meta.tags && meta.tags.length) {
+                    headerHtml += '<div class="blog-card-tags">' + meta.tags.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join(" ") + '</div>';
+                }
+                headerHtml += '</header><hr class="blog-post-divider">';
 
-                const bodyHtml = marked.parse(content);
-
-                container.innerHTML = headerHtml + `<div class="blog-post-body">${bodyHtml}</div>`;
+                var bodyHtml = marked.parse(content);
+                container.innerHTML = headerHtml + '<div class="blog-post-body">' + bodyHtml + '</div>';
             } catch (err) {
-                container.innerHTML = '<p>Could not load post. <a href="./">Go back to all posts.</a></p>';
+                container.innerHTML = '<p style="color: var(--term-fg-dim);">Could not load post. <a href="./">Go back to all posts.</a></p>';
                 console.error(err);
             }
         }

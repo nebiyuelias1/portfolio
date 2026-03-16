@@ -1,119 +1,55 @@
-@-webkit-keyframes bounce-top {
-    0% {
-        -webkit-transform: translateY(0);
+/* ==========================================================
+   Animations - Terminal-style effects
+   Omarchy: block cursor, no blink. Snappy, not floaty.
+   ========================================================== */
+
+/* Blinking cursor (used during typing animation only) */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Fade in — quick, like Hyprland popin */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
         transform: translateY(0);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    40% {
-        -webkit-transform: translateY(-12px);
-        transform: translateY(-12px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    65% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    82% {
-        -webkit-transform: translateY(-6px);
-        transform: translateY(-6px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    93% {
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    25%,
-    55%,
-    75%,
-    87% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
     }
 }
 
-@keyframes bounce-top {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    40% {
-        -webkit-transform: translateY(-12px);
-        transform: translateY(-12px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    65% {
-        -webkit-transform: translateY(-8px);
-        transform: translateY(-8px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    82% {
-        -webkit-transform: translateY(-6px);
-        transform: translateY(-6px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    93% {
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-    }
-
-    25%,
-    55%,
-    75%,
-    87% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-    }
-
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-        -webkit-animation-timing-function: ease-out;
-        animation-timing-function: ease-out;
-        opacity: 1;
-    }
+/* Glow pulse for active elements */
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 5px rgba(125, 130, 217, 0.2); }
+    50% { box-shadow: 0 0 15px rgba(125, 130, 217, 0.4); }
 }
+
+/* Cursor — solid block, blinks only during typing animation */
+.cursor-blink::after {
+    content: "\2588";
+    animation: blink 1s step-end infinite;
+    color: var(--primary-color);
+    margin-left: 2px;
+}
+
+/* Staggered fade in for list items */
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+    opacity: 0;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.05s; }
+.fade-in:nth-child(2) { animation-delay: 0.1s; }
+.fade-in:nth-child(3) { animation-delay: 0.15s; }
+.fade-in:nth-child(4) { animation-delay: 0.2s; }
+.fade-in:nth-child(5) { animation-delay: 0.25s; }
+.fade-in:nth-child(6) { animation-delay: 0.3s; }

@@ -1,9 +1,20 @@
 [
   {
+    "slug": "hiking-mocha-mountain",
+    "title": "Hiking Mocha Mountain in Taiwan",
+    "date": "2025-03-16",
+    "description": "My experience of hiking Mocha Mountain, in Jiaoxi, Taiwan",
+    "tags": [
+      "life",
+      "taiwan",
+      "hiking"
+    ]
+  },
+  {
     "slug": "my-journey-to-taiwan",
     "title": "My Journey to Taiwan",
     "date": "2025-01-15",
-    "description": "How I ended up living in Taiwan and what I've learned along the way.",
+    "description": "How I ended up pursuing my master's degree in Taiwan and what I've learned along the way.",
     "tags": [
       "life",
       "taiwan",

@@ -1,13 +1,83 @@
-/* Define color variables for the site */
+/* ==========================================================
+   Color System - Omarchy Ethereal theme + Habeshan heritage
+   Ethiopian flag: Green (#078930), Yellow (#FCDD09), Red (#DA121A)
+   Ethereal: bg #060B1E, fg #ffcead, accent #7d82d9
+   ========================================================== */
 
-/* Primary colors */
 :root {
-    --primary-color: rgba(243, 13, 13, 1);;
-    --primary-color-light: rgba(243, 13, 13, .2);
-    --secondary-color: #00ff00;
-    --tertiary-color: #0000ff;
+    /* Ethiopian heritage accent colors */
+    --eth-green: #078930;
+    --eth-yellow: #FCDD09;
+    --eth-red: #DA121A;
+
+    /* Terminal palette — based on Omarchy Ethereal theme */
+    --term-bg: #060B1E;
+    --term-bg-light: #0c1228;
+    --term-bg-panel: #091020;
+    --term-fg: #ffcead;
+    --term-fg-dim: #6d7db6;
+    --term-fg-bright: #ffcead;
+    --term-border: #1a2040;
+    --term-border-active: #7d82d9;
+    --term-highlight: rgba(125, 130, 217, 0.08);
+
+    /* Ethereal ANSI palette */
+    --ansi-red: #ED5B5A;
+    --ansi-green: #92a593;
+    --ansi-yellow: #E9BB4F;
+    --ansi-blue: #7d82d9;
+    --ansi-magenta: #c89dc1;
+    --ansi-cyan: #a3bfd1;
+    --ansi-orange: #F99957;
+
+    /* Semantic colors — accent is Ethereal purple-blue */
+    --primary-color: var(--ansi-blue);
+    --primary-color-light: rgba(125, 130, 217, 0.15);
+    --secondary-color: var(--ansi-yellow);
+    --accent-color: var(--ansi-orange);
+
+    /* Prompt colors (Starship-style) */
+    --prompt-user: var(--ansi-green);
+    --prompt-path: var(--ansi-cyan);
+    --prompt-symbol: var(--ansi-yellow);
+
+    /* Status bar — Waybar-style, uses accent */
+    --statusbar-bg: var(--ansi-blue);
+    --statusbar-fg: #060B1E;
+
+    /* Selection */
+    --selection-bg: rgba(125, 130, 217, 0.25);
+
+    /* ── Habeshan Tilet (ጥለት) Patterns ──
+       Geometric woven patterns inspired by Ethiopian traditional textiles.
+       Encoded as inline SVG data URIs for zero-dependency rendering.
+       Colors adapted to blend with the Ethereal palette. */
+
+    /* Cross/Meskel motif — interlocking Ethiopian crosses in a tile grid */
+    --tilet-cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Crect x='10' y='2' width='4' height='20' rx='0.5' fill='%237d82d9' opacity='0.25'/%3E%3Crect x='2' y='10' width='20' height='4' rx='0.5' fill='%237d82d9' opacity='0.25'/%3E%3Crect x='9' y='9' width='6' height='6' rx='0.5' fill='%23E9BB4F' opacity='0.15'/%3E%3C/svg%3E");
+
+    /* Diamond lattice — interlocking rotated squares forming a woven mesh */
+    --tilet-diamond: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M10 2 L18 10 L10 18 L2 10 Z' fill='none' stroke='%237d82d9' stroke-width='0.8' opacity='0.15'/%3E%3Cpath d='M10 6 L14 10 L10 14 L6 10 Z' fill='none' stroke='%23E9BB4F' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+
+    /* Zigzag border — chevron/zigzag stripe for thin decorative borders */
+    --tilet-zigzag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath d='M0 6 L3 0 L6 6 L9 0 L12 6' fill='none' stroke='%237d82d9' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E");
+
+    /* Netela border — wider decorative strip with tilet cross row motif */
+    --tilet-netela: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Crect x='14' y='1' width='4' height='14' rx='0.5' fill='%237d82d9' opacity='0.2'/%3E%3Crect x='5' y='6' width='22' height='4' rx='0.5' fill='%237d82d9' opacity='0.2'/%3E%3Crect x='13' y='5' width='6' height='6' fill='%23E9BB4F' opacity='0.1'/%3E%3Ccircle cx='3' cy='8' r='1.5' fill='%23ED5B5A' opacity='0.2'/%3E%3Ccircle cx='29' cy='8' r='1.5' fill='%23ED5B5A' opacity='0.2'/%3E%3C/svg%3E");
 }
 
 .color-primary {
     color: var(--primary-color);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+.color-accent {
+    color: var(--accent-color);
+}
+
+.color-dim {
+    color: var(--term-fg-dim);
 }
