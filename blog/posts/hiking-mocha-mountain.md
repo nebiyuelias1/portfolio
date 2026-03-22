@@ -39,7 +39,7 @@ The next day, we had to take a bus to a place called [Wufongci](https://en.wikip
 The first 3 or 4 kms were flat and not challenging I have to say. Along the way we discovered a very good looking Catholic church.
 
 <figure>
-  <img src="/assets/img/catholic-church.jpg" alt="Catholic Church" />
+  <img src="/assets/img/church.jpg" alt="Catholic Church" />
   <figcaption><em>Catholic Church</em></figcaption>
 </figure>
 <!-- Add photo of the church -->
