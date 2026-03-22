@@ -15,7 +15,7 @@ tags:
 የሞቻ ተራራ (Mocha Mountain) የሚለው ስም በቅርብ ጊዜ የተሰጠው እንደሆነ ሰምቻለሁ፤ ይህ የሆነው አንድ ጃፓናዊ ፎቶግራፍ አንሺ በማህበራዊ ሚዲያ ላይ ታዋቂ ካደረገው በኋላ ነው። የላይኛው ክፍል እይታ ትንሽ ሞቻን ይመስላል፣ ስለዚህም ስሙን አግኝቷል። ይህ ተራራ በታይዋን፣ [ጂያኦክሲ (Jiaoxi)](https://en.wikipedia.org/wiki/Jiaoxi,_Yilan) ውስጥ ይገኛል።
 
 <figure>
-  <img src="/assets/img/mocha-mountain.png" alt="እኔ በሞቻ ተራራ ጫፍ ላይ" />
+  <img src="/assets/img/mocha-mountain.jpg" alt="እኔ በሞቻ ተራራ ጫፍ ላይ" />
   <figcaption><em>እኔ በሞቻ ተራራ ጫፍ ላይ፣ ጂያኦክሲ፣ ታይዋን</em></figcaption>
 </figure>
 

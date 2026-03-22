@@ -19,7 +19,7 @@ translations:
 I heard the name Mocha mountain is actually a slightly newer name given to the mountain after a Japanese photographer made it popular on social media. The view at the top kinda looks like Mocha, hence the name. This mountain is found in [Jiaoxi](https://en.wikipedia.org/wiki/Jiaoxi,_Yilan), Taiwan. 
 
 <figure>
-  <img src="/assets/img/mocha-mountain.png" alt="Me at the peak of Mocha mountain" />
+  <img src="/assets/img/mocha-mountain.jpg" alt="Me at the peak of Mocha mountain" />
   <figcaption><em>Me at the peak of Mocha mountain, Jiaoxi, Taiwan.</em></figcaption>
 </figure>
 

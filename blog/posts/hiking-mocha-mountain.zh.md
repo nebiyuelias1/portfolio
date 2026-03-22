@@ -15,7 +15,7 @@ tags:
 我聽說抹茶山這個名字其實是最近才有的，是因為一位日本攝影師在社群媒體上讓它爆紅。山頂的景色看起來有點像抹茶，所以才有了這個名字。這座山位於台灣[礁溪](https://zh.wikipedia.org/wiki/%E7%A4%81%E6%BA%AA%E9%84%89)。
 
 <figure>
-  <img src="/assets/img/mocha-mountain.png" alt="我在抹茶山頂" />
+  <img src="/assets/img/mocha-mountain.jpg" alt="我在抹茶山頂" />
   <figcaption><em>我在抹茶山頂，台灣礁溪。</em></figcaption>
 </figure>
 
