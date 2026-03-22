@@ -23,6 +23,7 @@ function buildBlogManifest() {
       date: data.date ? new Date(data.date).toISOString().split("T")[0] : null,
       description: data.description || "",
       tags: data.tags || [],
+      translations: data.translations || {},
     };
   });
 

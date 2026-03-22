@@ -1,14 +1,49 @@
 [
   {
-    "slug": "hiking-mocha-mountain",
-    "title": "Hiking Mocha Mountain in Taiwan",
+    "slug": "hiking-mocha-mountain.am",
+    "title": "የሞቻ ተራራን መውጣት",
     "date": "2025-03-16",
-    "description": "My experience of hiking Mocha Mountain, in Jiaoxi, Taiwan",
+    "description": "በታይዋን፣ ጂያኦክሲ ውስጥ የሞቻ ተራራን የመውጣት ልምዴ።",
     "tags": [
       "life",
       "taiwan",
-      "hiking"
-    ]
+      "hiking",
+      "mocha",
+      "mountain"
+    ],
+    "translations": {}
+  },
+  {
+    "slug": "hiking-mocha-mountain",
+    "title": "Hiking Mocha Mountain",
+    "date": "2025-03-16",
+    "description": "My experience of hiking Mocha Mountain, in Jiaoxi, Taiwan.",
+    "tags": [
+      "life",
+      "taiwan",
+      "hiking",
+      "mocha",
+      "mountain"
+    ],
+    "translations": {
+      "en": "hiking-mocha-mountain",
+      "zh": "hiking-mocha-mountain.zh",
+      "am": "hiking-mocha-mountain.am"
+    }
+  },
+  {
+    "slug": "hiking-mocha-mountain.zh",
+    "title": "攀登抹茶山",
+    "date": "2025-03-16",
+    "description": "我在台灣礁溪攀登抹茶山的經歷。",
+    "tags": [
+      "life",
+      "taiwan",
+      "hiking",
+      "mocha",
+      "mountain"
+    ],
+    "translations": {}
   },
   {
     "slug": "my-journey-to-taiwan",
@@ -19,7 +54,8 @@
       "life",
       "taiwan",
       "education"
-    ]
+    ],
+    "translations": {}
   },
   {
     "slug": "setting-up-cicd-flutter",
@@ -30,6 +66,7 @@
       "flutter",
       "ci-cd",
       "devops"
-    ]
+    ],
+    "translations": {}
   }
 ]
