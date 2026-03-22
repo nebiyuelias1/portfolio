@@ -29,7 +29,19 @@ After getting off work around 5:30 PM on Friday, March 13 2026 me and my coworke
 
 After we arrived in Jiaoxi bus stop, we went to the place we booked for staying for the night. While we walked to our place, we noticed a lot of fancy hotels and hot spring places. Once we arrived to our hotel room, I was surprised to know that there was no human waiting for us at the counter. We simply entered the PIN on the door lock and went straight to our room. Luckily, the room also had a hot spring inside the bathroom. Since, we were tired from a long day we decided to sleep earlier and get ready for the next day. 
 
-The next day, we had to take a bus to a place called [Wufongci](https://en.wikipedia.org/wiki/Wufengqi_Waterfall). This is where the trail starts. The first 3 or 4 kms were flat and not challenging I have to say. Along the way we discovered a very good looking Catholic church.
+The next day, we had to take a bus to a place called [Wufongci](https://en.wikipedia.org/wiki/Wufengqi_Waterfall). This is where the trail starts. 
+
+<figure>
+  <img src="/assets/img/wofenqi-trail.jpg" alt="Wufongci Trail Map" />
+  <figcaption><em>Wufongci Trail Map</em></figcaption>
+</figure>
+
+The first 3 or 4 kms were flat and not challenging I have to say. Along the way we discovered a very good looking Catholic church.
+
+<figure>
+  <img src="/assets/img/catholic-church.jpg" alt="Catholic Church" />
+  <figcaption><em>Catholic Church</em></figcaption>
+</figure>
 <!-- Add photo of the church -->
 
 After taking a brief rest we continued our ascent to the top.
