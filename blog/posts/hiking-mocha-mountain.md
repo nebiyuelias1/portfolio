@@ -14,6 +14,8 @@ tags:
 
 I heard the name Mocha mountain is actually a slightly newer name given to the mountain after a Japanese photographer made it popular on social media. The view at the top kinda looks like Mocha, hence the name. This mountain is found in Jiaoxi, Taiwan. 
 
+<img width="1157" height="868" alt="Me taking at the peak of Mocha mountain" src="https://github.com/user-attachments/assets/9a2e5a45-1acd-4114-ac89-32daee9ad2c0" />
+
 My colleagues and I have planned to visit this mountain since last year. Unfortunately, it was always postponed due to bad weather. I think this is the third time we tried. But I'm glad it happened finally. Most of the planning and organizing is done by my coworkers. I have to say Taiwanese people are really good at planning and organizing things. So I had no worries.
 
 After getting off work around 5:30 PM on Friday, March 13 2026 me and my coworkers took the MRT from Guandu to Taipei Main Station. We had an earlier dinner before the departure of our bus to Jiaoxi. The trip to Jiaoxi took almost an hour. Honestly, this made me appreciate the convenience of Taiwan. The country is a small island but at the same time things are super convenient. 
