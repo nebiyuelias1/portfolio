@@ -42,6 +42,25 @@ The first 3 or 4 kms were flat and not challenging I have to say. Along the way 
   <img src="/assets/img/church.jpg" alt="Catholic Church" />
   <figcaption><em>Catholic Church</em></figcaption>
 </figure>
+
+
+<figure>
+  <img src="/assets/img/inside-church.jpg" alt="Inside the Church" />
+  <figcaption><em>Inside the Church</em></figcaption>
+</figure>
 <!-- Add photo of the church -->
 
-After taking a brief rest we continued our ascent to the top.
+After taking a brief rest we continued our ascent to the top. We met a lot of people at the resting area. There was one particular guy that interested me though. He was an old guy doing impressive stretching exercises. I was so impressed with his ability to the point that I talked to him a little bit using my terrible Chinese skills. I was shocked when he told us he is 78 years old. I even asked him to teach me, because I'm super stiff.
+
+<figure>
+  <img src="/assets/img/me-and-colleagues.jpg" alt="Me and my colleagues" />
+  <figcaption><em>With my colleagues</em></figcaption>
+</figure>
+
+
+<figure>
+  <img src="/assets/img/flexible-old-guy.jpg" alt="Flexible old guy" />
+  <figcaption><em>Flexible 78 year old guy teaching me how to stretch</em></figcaption>
+</figure>
+
+
