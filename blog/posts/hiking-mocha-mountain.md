@@ -63,4 +63,36 @@ After taking a brief rest we continued our ascent to the top. We met a lot of pe
   <figcaption><em>Flexible 78 year old guy teaching me how to stretch</em></figcaption>
 </figure>
 
+After resting for a little, we started the difficult journey of climbing steep stairs towards the top of the mountain. We saw a lot of people along the way. I even saw some people doing trail running. At the time, I was getting out of breath and started wondering how people could do trail running. But the view was really stunning.
+
+I also have to mention I do get the foreigner advantage while living in Taiwan. Apparently I'm called a-tok-á (阿啄仔) in Taiwanese (It's a completely different language than Mandarin). In my country we call foreigners ፈረንጅ (Ferenj). But it usually applies to white skinned people. Anyways, while we were climbing to the top, one particular guy asked me "Where are you from?", and I told him I'm from Ethiopia. Then he asked me if he can take a photo with me and I agreed with him because I see no problem with it.
+
+<figure>
+  <img src="/assets/img/hiking-friend.jpg" alt="Hiking buddy" />
+  <figcaption><em>Hiking buddy I met while climbing Mocha Mountain</em></figcaption>
+</figure>
+
+There was also another woman with this guy who I thought was his wife, but it turned out to be his friends. Honestly, I was surprised at first 😂 but why not right? 
+
+
+<figure>
+  <img src="/assets/img/hiking-friend.jpg" alt="Female Hiking buddy" />
+  <figcaption><em>My hiking buddy's friend</em></figcaption>
+</figure>
+
+After this we continued our climb to the very top of the mountain. While we reached there we found other people just chilling and taking photos. It was a spectacular view at the top. At this point we're at 950 meters elevation. 
+
+I was surprised to see the crucifixion at the top. But I learned that there was an Italian missionary who came to this part of Taiwan and the Church I mentioned was also started by him. 
+
+
+<figure>
+  <img src="/assets/img/crucifixion.jpg
+" alt="The crucifixion" />
+  <figcaption><em>The crucifixion</em></figcaption>
+</figure>
+
+After enjoying the view at the top we took a break and had some food before going down the mountain. Going down was as challenging as the climb. But in the end it was worth it. The weather was also nice that day. I highly recommend you to check out this mountain.
+
+
+
 
