@@ -76,7 +76,7 @@ translations:
 
 
 <figure>
-  <img src="/assets/img/hiking-friend.jpg" alt="女性登山朋友" />
+  <img src="/assets/img/female-hiking-friend.jpg" alt="女性登山朋友" />
   <figcaption><em>我登山朋友的朋友</em></figcaption>
 </figure>
 

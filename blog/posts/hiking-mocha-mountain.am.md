@@ -73,7 +73,7 @@ translations:
 ከዚህ ሰው ጋር ሌላ ሴት ነበረች፣ ሚስቱ እንደሆነች አስቤ ነበር፣ ግን ጓደኛው ሆና ተገኘች። እውነቱን ለመናገር በመጀመሪያ ተገርሜ ነበር 😂 ግን ለምን አይሆንም?
 
 <figure>
-  <img src="/assets/img/hiking-friend.jpg" alt="ሴት የእግር ጉዞ ጓደኛ" />
+  <img src="/assets/img/female-hiking-friend.jpg" alt="ሴት የእግር ጉዞ ጓደኛ" />
   <figcaption><em>የእግር ጉዞ ጓደኛዬ ጓደኛ</em></figcaption>
 </figure>
 
