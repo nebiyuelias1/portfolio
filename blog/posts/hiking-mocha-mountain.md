@@ -76,7 +76,7 @@ There was also another woman with this guy who I thought was his wife, but it tu
 
 
 <figure>
-  <img src="/assets/img/hiking-friend.jpg" alt="Female Hiking buddy" />
+  <img src="/assets/img/female-hiking-friend.jpg" alt="Female Hiking buddy" />
   <figcaption><em>My hiking buddy's friend</em></figcaption>
 </figure>
 
