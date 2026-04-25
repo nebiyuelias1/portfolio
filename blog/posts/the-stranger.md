@@ -26,3 +26,5 @@ I have worked on an early stage startup before (working for someone). Unfortunat
 # Tech details
 
 I've chosen to use Ruby on Rails (RoR), which is literally the OG of web frameworks. It allows me to move faster from idea to implementation and it has everything a web app needs. I'm also self-hosting the app on my Mac Mini at home. I'm not going to be spending money on a VPS or other hosting service for an idea that might not even work. Thanks to Cloud Flare there is no noticeable difference in terms of speed as far as I'm concerned and I don't have that much traffic. It will continue this way and I actually want things to go naturally and slowly.
+<img width="450" height="800" alt="image" src="https://github.com/user-attachments/assets/59b938cb-0b4d-4df1-9c3a-7e83939cf19e" />
+
