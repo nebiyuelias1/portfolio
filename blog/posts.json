@@ -1,5 +1,18 @@
 [
   {
+    "slug": "the-stranger",
+    "title": "Side project meets personal hobby",
+    "date": "2025-04-25",
+    "description": "I'm building an app to help organize book clubs",
+    "tags": [
+      "book_club",
+      "taiwan",
+      "rails",
+      "side_project"
+    ],
+    "translations": {}
+  },
+  {
     "slug": "hiking-mocha-mountain.am",
     "title": "የሞቻ ተራራን መውጣት",
     "date": "2025-03-16",
@@ -11,7 +24,11 @@
       "mocha",
       "mountain"
     ],
-    "translations": {}
+    "translations": {
+      "en": "hiking-mocha-mountain",
+      "zh": "hiking-mocha-mountain.zh",
+      "am": "hiking-mocha-mountain.am"
+    }
   },
   {
     "slug": "hiking-mocha-mountain",
@@ -33,9 +50,9 @@
   },
   {
     "slug": "hiking-mocha-mountain.zh",
-    "title": "攀登抹茶山",
+    "title": "爬抹茶山",
     "date": "2025-03-16",
-    "description": "我在台灣礁溪攀登抹茶山的經歷。",
+    "description": "我在台灣礁溪爬抹茶山的經驗。",
     "tags": [
       "life",
       "taiwan",
@@ -43,7 +60,11 @@
       "mocha",
       "mountain"
     ],
-    "translations": {}
+    "translations": {
+      "en": "hiking-mocha-mountain",
+      "zh": "hiking-mocha-mountain.zh",
+      "am": "hiking-mocha-mountain.am"
+    }
   },
   {
     "slug": "my-journey-to-taiwan",
