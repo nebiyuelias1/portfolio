@@ -406,6 +406,7 @@ img {
     margin: 0;
     line-height: 1.15;
     overflow-x: auto;
+    overflow-y: hidden;
     white-space: pre;
 }
 
