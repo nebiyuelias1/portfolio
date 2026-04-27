@@ -12,7 +12,7 @@ tags:
 I've been attending a book club organized here in Taipei once a month. This book club is called [Read Around the World](https://meetu.ps/e/PXqBc/LCysF/i) and we select a book that is manageable to be read within a month and gather in a coffee shop to discuss the book. So far I've attended three events and today I will be attending my fourth one. This month we have been reading Albert Camus' book "The Stranger."
 
 <figure>
-  <img width="542" height="962" alt="The Stranger book club meetup" src="https://github.com/user-attachments/assets/3132fc42-d6dc-4a75-9f4e-3f0e0f5e154a" />
+  <img width="1281" height="962" alt="image" src="https://github.com/user-attachments/assets/a2c866cf-0d68-402b-93f7-6cc5efe1c817" />
   <figcaption><em>The Stranger book club meetup</em></figcaption>
 </figure>
 
