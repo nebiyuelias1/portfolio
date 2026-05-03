@@ -1,163 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#060B1E">
-    <meta name="theme-color" content="#060B1E">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/icons/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#060B1E" />
+    <meta name="theme-color" content="#060B1E" />
     <title>Blog | Nebiyu Elias</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="blog.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Waybar -->
     <div class="waybar">
-        <div class="waybar-left">
-            <span class="waybar-logo">&#9670;</span>
-            <span class="waybar-workspace active">1</span>
-            <span class="waybar-workspace">2</span>
-            <span class="waybar-workspace">3</span>
-            <span class="waybar-workspace">4</span>
-            <span class="waybar-workspace">5</span>
-        </div>
-        <div class="waybar-center">
-            <span id="waybarClock"></span>
-        </div>
-        <div class="waybar-right">
-            <span class="waybar-module">&#9729; Taipei</span>
-            <span class="waybar-module">&#9889; utf-8</span>
-            <span class="waybar-module waybar-indicator">&#9679;</span>
-        </div>
+      <div class="waybar-left">
+        <span class="waybar-logo">&#9670;</span>
+        <span class="waybar-workspace active">1</span>
+        <span class="waybar-workspace">2</span>
+        <span class="waybar-workspace">3</span>
+        <span class="waybar-workspace">4</span>
+        <span class="waybar-workspace">5</span>
+      </div>
+      <div class="waybar-center">
+        <span id="waybarClock"></span>
+      </div>
+      <div class="waybar-right">
+        <span class="waybar-module">&#9729; Taipei</span>
+        <span class="waybar-module">&#9889; utf-8</span>
+        <span class="waybar-module waybar-indicator">&#9679;</span>
+      </div>
     </div>
 
     <div class="terminal-window">
-
-        <!-- Tab Bar -->
-        <nav class="tab-bar" id="tabBar">
-            <div class="tab-links" id="tabLinks">
-                <a href="../#home" data-section="home">
-                    <span class="tab-icon">~</span> home
-                </a>
-                <a href="../#about" data-section="about">
-                    <span class="tab-icon">i</span> about
-                </a>
-                <a href="../#projects" data-section="projects">
-                    <span class="tab-icon">&gt;</span> projects
-                </a>
-                <a href="./" class="active-tab" data-section="blog">
-                    <span class="tab-icon">#</span> blog
-                </a>
-                <a href="../#contact" data-section="contact">
-                    <span class="tab-icon">@</span> contact
-                </a>
-            </div>
-            <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-
-        <!-- Content -->
-        <div class="terminal-body">
-            <main class="container blog-container">
-                <div class="blog-section-header">
-                    <span class="section-icon">&#9632;</span>
-                    <h1>Blog</h1>
-                </div>
-                <p class="blog-description">
-                    <span class="hl-comment"># </span>Thoughts on software engineering, life in Taiwan, and everything in between.
-                </p>
-
-                <div id="blog-posts" class="blog-posts">
-                    <p class="loading-text">Loading posts...</p>
-                </div>
-            </main>
+      <!-- Tab Bar -->
+      <nav class="tab-bar" id="tabBar">
+        <div class="tab-links" id="tabLinks">
+          <a href="../#home" data-section="home">
+            <span class="tab-icon">~</span> home
+          </a>
+          <a href="../#about" data-section="about">
+            <span class="tab-icon">i</span> about
+          </a>
+          <a href="../#projects" data-section="projects">
+            <span class="tab-icon">&gt;</span> projects
+          </a>
+          <a href="./" class="active-tab" data-section="blog">
+            <span class="tab-icon">#</span> blog
+          </a>
+          <a href="../#contact" data-section="contact">
+            <span class="tab-icon">@</span> contact
+          </a>
         </div>
+        <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
 
-        <!-- Status Bar -->
-        <footer class="status-bar">
-            <span class="status-bar-mode">NORMAL</span>
-            <span class="status-bar-file">blog/index</span>
-            <div class="status-bar-right">
-                <a href="../">&larr; back to portfolio</a>
-            </div>
-        </footer>
+      <!-- Content -->
+      <div class="terminal-body">
+        <main class="container blog-container">
+          <div class="blog-section-header">
+            <span class="section-icon">&#9632;</span>
+            <h1>Blog</h1>
+          </div>
+          <p class="blog-description">
+            <span class="hl-comment"># </span>Thoughts on software engineering,
+            life, and everything in between.
+          </p>
+
+          <div id="blog-posts" class="blog-posts">
+            <p class="loading-text">Loading posts...</p>
+          </div>
+        </main>
+      </div>
+
+      <!-- Status Bar -->
+      <footer class="status-bar">
+        <span class="status-bar-mode">NORMAL</span>
+        <span class="status-bar-file">blog/index</span>
+        <div class="status-bar-right">
+          <a href="../">&larr; back to portfolio</a>
+        </div>
+      </footer>
     </div>
 
     <script>
-        // Waybar clock
-        (function () {
-            var el = document.getElementById("waybarClock");
-            function tick() {
-                if (!el) return;
-                var now = new Date();
-                var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-                var h = now.getHours().toString().padStart(2, "0");
-                var m = now.getMinutes().toString().padStart(2, "0");
-                el.textContent = days[now.getDay()] + " " + h + ":" + m;
-            }
-            tick(); setInterval(tick, 15000);
-        })();
-
-        // Mobile menu toggle
-        function toggleMenu() {
-            var tabLinks = document.querySelector("#tabLinks");
-            var menuIcon = document.querySelector("#menu-icon");
-            if (tabLinks) tabLinks.classList.toggle("active");
-            if (menuIcon) menuIcon.classList.toggle("active");
+      // Waybar clock
+      (function () {
+        var el = document.getElementById("waybarClock");
+        function tick() {
+          if (!el) return;
+          var now = new Date();
+          var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ];
+          var h = now.getHours().toString().padStart(2, "0");
+          var m = now.getMinutes().toString().padStart(2, "0");
+          el.textContent = days[now.getDay()] + " " + h + ":" + m;
         }
+        tick();
+        setInterval(tick, 15000);
+      })();
 
-        // Load and render blog posts
-        async function loadPosts() {
-            var container = document.getElementById("blog-posts");
-            try {
-                var response = await fetch("posts.json");
-                if (!response.ok) throw new Error("Failed to load posts");
-                var posts = await response.json();
+      // Mobile menu toggle
+      function toggleMenu() {
+        var tabLinks = document.querySelector("#tabLinks");
+        var menuIcon = document.querySelector("#menu-icon");
+        if (tabLinks) tabLinks.classList.toggle("active");
+        if (menuIcon) menuIcon.classList.toggle("active");
+      }
 
-                if (posts.length === 0) {
-                    container.innerHTML = '<p style="color: var(--term-fg-dim);">No posts yet. Check back soon.</p>';
-                    return;
-                }
+      // Load and render blog posts
+      async function loadPosts() {
+        var container = document.getElementById("blog-posts");
+        try {
+          var response = await fetch("posts.json");
+          if (!response.ok) throw new Error("Failed to load posts");
+          var posts = await response.json();
 
-                container.innerHTML = posts.map(function (post) {
-                    return '<article class="blog-card">' +
-                        '<a href="post.html#' + post.slug + '" class="blog-card-link">' +
-                        '<div class="blog-card-content">' +
-                        '<time class="blog-card-date" datetime="' + post.date + '">' + formatDate(post.date) + '</time>' +
-                        '<h2 class="blog-card-title">' + post.title + '</h2>' +
-                        '<p class="blog-card-description">' + post.description + '</p>' +
-                        '<div class="blog-card-tags">' +
-                        post.tags.map(function (tag) { return '<span class="tag">' + tag + '</span>'; }).join(" ") +
-                        '</div></div></a></article>';
-                }).join("");
-            } catch (err) {
-                container.innerHTML = '<p style="color: var(--term-fg-dim);">Could not load posts. Run <code>npm run build</code> to generate the posts manifest.</p>';
-                console.error(err);
-            }
+          if (posts.length === 0) {
+            container.innerHTML =
+              '<p style="color: var(--term-fg-dim);">No posts yet. Check back soon.</p>';
+            return;
+          }
+
+          container.innerHTML = posts
+            .map(function (post) {
+              return (
+                '<article class="blog-card">' +
+                '<a href="post.html#' +
+                post.slug +
+                '" class="blog-card-link">' +
+                '<div class="blog-card-content">' +
+                '<time class="blog-card-date" datetime="' +
+                post.date +
+                '">' +
+                formatDate(post.date) +
+                "</time>" +
+                '<h2 class="blog-card-title">' +
+                post.title +
+                "</h2>" +
+                '<p class="blog-card-description">' +
+                post.description +
+                "</p>" +
+                '<div class="blog-card-tags">' +
+                post.tags
+                  .map(function (tag) {
+                    return '<span class="tag">' + tag + "</span>";
+                  })
+                  .join(" ") +
+                "</div></div></a></article>"
+              );
+            })
+            .join("");
+        } catch (err) {
+          container.innerHTML =
+            '<p style="color: var(--term-fg-dim);">Could not load posts. Run <code>npm run build</code> to generate the posts manifest.</p>';
+          console.error(err);
         }
+      }
 
-        function formatDate(dateStr) {
-            if (!dateStr) return "";
-            var date = new Date(dateStr + "T00:00:00");
-            return date.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-            });
-        }
+      function formatDate(dateStr) {
+        if (!dateStr) return "";
+        var date = new Date(dateStr + "T00:00:00");
+        return date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
 
-        loadPosts();
+      loadPosts();
     </script>
-</body>
-
+  </body>
 </html>
