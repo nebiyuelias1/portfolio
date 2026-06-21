@@ -1,27 +1,18 @@
 ---
-title: My Adventure in Hualien 
+title: My Adventure in Hualien
 date: 2026-06-17
 description: My first visit to the eastern cost of Hualien in Taiwan.
 tags:
   - life
   - taiwan
-  - travel 
+  - travel
 ---
 
 # My Adventure in Hualien-->
-Although I have been living in Taiwan for more than three years, I've never been to Hualien. Not sure why but after almost a month of planning I've arrived in Hualien by train from Taipei at around 10:20 PM local time. Because I was feeling hungry I went to the first 7-Eleven that I discovered right outside the train station. After eating a late night snack I walked a few minutes to my hostel and went straight to the reception. I am staying at Wow Hostel here in Taipei. After a smooth checkin process I got my card and went straight to my room. Honestly, I felt a bit awkward when entering the room with other guests already sleeping. I don't know I have this weird feeling whenever I met strangers for the first time. I'm sure it was strange for the taiwanese people staying there to be greeted by a random foreigner at around midnight 😂. 
-<!---->
-<!-- Moving from Ethiopia to Taiwan was one of the most significant decisions of my life. In this post, I want to share the story of how it happened and what I've learned along the way. -->
-<!---->
-<!-- ## How It Started -->
-<!---->
-<!-- It all began when I discovered the ASUS scholarship opportunity. As someone who had always been passionate about technology and had built a career in software engineering, the chance to pursue a master's degree at NTUST was too good to pass up. -->
-<!---->
-<!-- ## The Application Process -->
-<!---->
-<!-- The application process was rigorous but rewarding. I had to: -->
-<!---->
-<!-- 1. Prepare all my academic transcripts -->
-<!-- 2. Write a compelling statement of purpose -->
-<!-- 3. Get recommendation letters from professors and employers -->
-<!-- 4. Pass the English
+
+Although I have been living in Taiwan for more than three years, I've never been to Hualien. Not sure why but after almost a month of planning I've arrived in Hualien by train from Taipei at around 10:20 PM local time. Because I was feeling hungry I went to the first 7-Eleven that I discovered right outside the train station. After eating a late night snack I walked a few minutes to my hostel and went straight to the reception. I am staying at Wow Hostel here in Taipei. After a smooth checkin process I got my card and went straight to my room. Honestly, I felt a bit awkward when entering the room with other guests already sleeping. I don't know I have this weird feeling whenever I met strangers for the first time. I'm sure it was strange for the Taiwanese people staying there to be greeted by a random foreigner at around midnight 😂. Anyways, I slept immediately after taking shower because I needed to make up very early on the next morning as was instructed by my tour driver Allen.
+
+## Going to Taroko National Park
+
+The next day I woke up very early in the morning and had some breakfast by eating a toast at the hostel I was staying at and went to the nearest 7-eleven to buy some additional food for my day trip to the Taroko National Park. My driver Allen was going to pick me up around 7:30 AM in the morning. He arrived right on time and he opened the door for me to his van. He picked up other people from different parts of Hualien and we started our journey to 七星潭. This place has a rock balancing art that looks impressive.
+
