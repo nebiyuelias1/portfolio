@@ -1,5 +1,5 @@
 ---
-title: My Adventure in Hualien
+title: My Epic Adventure in Hualien
 date: 2026-06-17
 description: My first visit to the eastern cost of Hualien in Taiwan.
 tags:
