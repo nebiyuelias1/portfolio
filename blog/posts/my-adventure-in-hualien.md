@@ -14,8 +14,11 @@ Although I have been living in Taiwan for more than three years, I've never been
 
 ## Going to Taroko National Park
 
-The next day I woke up very early in the morning and had some breakfast by eating a toast at the hostel I was staying at and went to the nearest 7-eleven to buy some additional food for my day trip to the Taroko National Park. My driver Allen was going to pick me up around 7:30 AM in the morning. He arrived right on time and he opened the door for me to his van. He picked up other people from different parts of Hualien and we started our journey to 七星潭. This place has a rock balancing art that looks impressive.
+The next day I woke up very early in the morning and had some breakfast by eating a toast at the hostel I was staying at and went to the nearest 7-eleven to buy some additional food for my day trip to the Taroko National Park. My driver Allen was going to pick me up around 7:30 AM in the morning. He arrived right on time and he opened the door for me to his van. He picked up other people from different parts of Hualien and we started our journey to 七星潭 (Qixing Tan) beach on the coast of the pacific ocean. Right on the beach was a rock balancing art that looks impressive.
 
-<img width="542" height="962" alt="PXL_20260618_001445950 MP" src="https://github.com/user-attachments/assets/f938abe9-b2c7-41ab-b9c4-8fae043e4f01" />
+<figure>
+  <img width="542" height="962" alt="Rock Balancing Art" src="https://github.com/user-attachments/assets/f938abe9-b2c7-41ab-b9c4-8fae043e4f01" />
+  <figcaption><em>Rock Balancing Art</em></figcaption>
+</figure>
 
-
+After that we went to
